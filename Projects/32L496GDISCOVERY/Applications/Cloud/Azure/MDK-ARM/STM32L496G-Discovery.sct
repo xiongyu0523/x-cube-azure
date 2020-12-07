@@ -1,0 +1,37 @@
+#! armcc -E -I.\
+; *************************************************************
+; *** Scatter-Loading Description File                      ***
+; *************************************************************
+#include "..\..\..\BootLoader_OSC\Linker_Common\MDK-ARM\mapping_sbsfu.h"
+#include "..\..\..\Bootloader_OSC\Linker_Common\MDK-ARM\mapping_fwimg.h"
+
+
+LR_ROM (REGION_SLOT_0_START + 0x200) {                      ; 0x200 = IMAGE_OFFSET
+  vector_start (REGION_SLOT_0_START + 0x200) FIXED VECTOR_SIZE {
+  *.o (RESET, +First)
+  }
+  ROM_region +0  {
+  *(InRoot$$Sections)
+  .ANY (+RO)
+  }
+
+  SB_SRAM1_region (SE_REGION_SRAM1_END + 1) SB_SRAM1_REGION_SIZE {
+  .ANY (STACK)
+  .ANY (HEAP)
+  .ANY (+RW +ZI)
+  }
+}
+
+; extra ROM region to make sure the binary size is a multiple of the AES block size (16 bytes)
+LR_ROM1(+0) ALIGN(16) {
+  ForAlignment +0 {
+    startup_stm32l496xx.o (ALIGNTOAESBLOCK,+Last)
+  }
+}
+
+LR_uninit_fixed_loc (REGION_SWAP_END + 1)  {
+  ER_uninit_fixed_loc (REGION_SWAP_END + 1) 0x3000 {
+    .ANY (UNINIT_FIXED_LOC)
+  }
+ }
+

@@ -1,0 +1,55 @@
+#! armcc -E -I.\
+; *************************************************************
+; *** Scatter-Loading Description File                      ***
+; *************************************************************
+#include "..\..\..\BootLoader_OSC\Linker_Common\MDK-ARM\mapping_sbsfu.h"
+#include "..\..\..\Bootloader_OSC\Linker_Common\MDK-ARM\mapping_fwimg.h"
+
+
+LR_ROM (REGION_SLOT_0_START + 0x400) ALIGN(16){                      ; 0x400 = IMAGE_OFFSET
+  vector_start (REGION_SLOT_0_START + 0x400) FIXED VECTOR_SIZE {
+  *.o (RESET, +First)
+  }
+  ROM_region +0  {
+  *(InRoot$$Sections)
+  .ANY (+RO)
+  }
+
+
+  SB_SRAM1_region (SE_REGION_SRAM1_END + 1) SB_SRAM1_REGION_SIZE {
+  .ANY (STACK)
+  .ANY (HEAP)
+  .ANY (+RW +ZI)
+  }
+}
+
+; extra ROM region to make sure the binary size is a multiple of the AES block size (16 bytes)
+LR_ROM1(+0) ALIGN(16) {
+  ForAlignment +0 {
+    startup_stm32f769xx.o (ALIGNTOAESBLOCK,+Last)
+  }
+}
+
+/* not working due to bug in CubeProgrammer
+LR_uninit_fixed_loc (SB_REGION_ROM_END + 1)  {
+  ER_uninit_fixed_loc (SB_REGION_ROM_END + 1) UNINIT FIXED 0x8000 {
+    * (UNINIT_FIXED_LOC)
+  }
+}
+*/
+
+
+/* SRAM2 : [0x2007C000, 0x2007FFFF] : 16 KBytes                                 */
+/*         [0x2007C000,0x2007C1FF]  : 512 Bytes     : Ethernet dma descripteurs */
+/*         [0x2007C200,0x2007FFFF]  : 15.5 KBytes   : Ethernet Buffers          */
+
+LR_SRAM2 0x2007C000  0x4000 {
+  region_RAM_NO_CACHE_DEVICE 0x2007C000 UNINIT 0x00000200 { ; Ethernet DMA descriptors
+    *.o (.sram2_non_cached_device)
+  }
+
+  region_RAM_NO_CACHE_NORMAL 0x2007C200 UNINIT  0x00003E00 { ; Ethernet buffers
+    *.o (.sram2_non_cached_normal)
+  }
+}
+

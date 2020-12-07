@@ -1,0 +1,4 @@
+pycryptodome
+pycryptodomex
+ecdsa
+pyelftools

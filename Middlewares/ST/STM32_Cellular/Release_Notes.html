@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="../../../_htmresc/rel_note.css">
+<title>RN for Cellular FWK 3.0.0</title>
+</head>
+<body>
+<script type="text/javascript">
+var toggle_hist_disp = true;
+function toggle_history()
+{
+if (toggle_hist_disp)
+{
+toggle_hist_disp = false;
+var filter_off_text = document.createTextNode("Hide History");
+document.getElementById('filter_hist').innerHTML = "";
+document.getElementById('filter_hist').appendChild(filter_off_text);
+document.getElementById("history").hidden = false;
+}
+else
+{
+toggle_hist_disp = true;
+var filter_on_text = document.createTextNode("Show History");
+document.getElementById('filter_hist').innerHTML = "";
+document.getElementById('filter_hist').appendChild(filter_on_text);
+document.getElementById("history").hidden = true;
+}
+}</script>
+<div class="Section1">
+
+<div id="header">
+<h1>Release Notes for Cellular Framework 3.0.0</h1>
+<p>Copyright 2019 STMicroelectronics</p>
+<a href="#" class="logo"><img src="../../../_htmresc/st_logo.png" alt="ST logo"></a>
+</div>
+
+<div id="license" class="topic1">
+<h2>License</h2>
+<p>Licensed under License SLA004 (the "License"). You may not use this package except in compliance with
+the License. You may obtain a copy of the License at:</p>
+<p class="license_url"><a href="http://www.st.com/SLA0044" target="_blank">SLA0044 license</a></p>
+</div>
+
+<div class="topic1" id="purpose">
+<h2>Purpose</h2>
+<p>the Cellular Framework is the SW stack that allow to drive cellular modem from STM32 MCU</p>
+<ul>
+<p class="SW_desc"><img alt="SW Architecture" src="../../../_htmresc/archi_diagram.png"></p>
+</div>
+
+<div id="release_container" class="topic1">
+<div class="topic2" id="identification">
+<h3>3.0.0 / W1907</h3>
+
+</div>
+<div class="topic3" id="changes">
+<h4>Main changes</h4>
+<p class="release_type">Maintenance release and product update</p>
+<div>
+<p>This V3.0.0 delivery is a new release with new features and new HW support</p>
+</div>
+
+<table class="tickets">
+<caption>Additional features</caption>
+<thead>
+<tr><th>Headline</th></tr>
+</thead>
+<tbody>
+<tr><td>New HW supported : Sequans GM01Q-STMOD modem board used on ST host boards: Disco L496 and Disco L475 IoT node</td></tr>
+<tr><td>UDP client in modem socket mode</td></tr>
+<tr><td>Echo client application added</td></tr>
+<tr><td>Boot menu improvements</td></tr>
+<tr><td>Username/Password management in APN</td></tr>
+<tr><td>Automatic SIM switching</td></tr>
+<tr><td>Bug correction regarding previous version (see tickets below)</td></tr>
+<tr><td>BG96 FW used is 02A07 (it can be seen in console at boot) if not, it must be updated. to flash a new modem FW (see https://stm32-c2c.com binaries)</td></tr></tbody>
+</table>
+<br>
+
+<table class="tickets">
+<caption>Fixed bugs list</caption>
+<thead>
+<tr><th>Ticket</th><th>Headline</th></tr>
+</thead>
+<tbody>
+<tr><td>59374</td><td>[Licenses update]: in STM32 X-Cube package</td></tr>
+<tr><td>57975</td><td>BG96 Modem socket UDP Client	</td></tr>
+<tr><td>57974</td><td>UG96 Modem socket UDP Client</td></tr>
+<tr><td>57967</td><td>Embedded SIM access for 2G Fallback not possible</td></tr>
+<tr><td>57136</td><td>Missing extra test at ATCustom_BG96_extractElement</td></tr>
+<tr><td>57049</td><td>MISRAC2012 unjustified violations in v2.0 to correct (partially corrected some will be in next release)</td></tr>
+<tr><td>56976</td><td>In line help for command line & menu</td></tr>
+</tbody>
+</table>
+<br>
+
+</div>
+<div class="topic3" id="contents">
+<h4>Contents</h4>
+<table class="tickets">
+<caption>Components</caption>
+<thead>
+<tr><th>Name</th><th>Version</th><th>Release note</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>Drivers: Cellular framework </td><td>V3.0.0</td><td></td></tr>
+<tr><td>Application: HTTP client (Grovestreams)</td><td></td><td></td></tr>
+<tr><td>Application: PING client</td><td></td><td></td></tr>
+<tr><td>Application: Echo client</td><td></td><td></td></tr>
+</tbody>
+</table>
+<br>
+</div>
+
+<div class="topic3" id="memory">
+<h4>Contents</h4>
+<table class="tickets">
+<caption>Memory (IAR)</caption>
+<thead>
+<tr><th>What</th><th>Flash (in bytes)</th><th>RAM (in bytes)</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>Disco L496 - BG96 - LwIP - with trace</td>                   <td>206985</td><td>89767</td></tr>
+<tr><td>Disco L496 - BG96 - LwIP - without trace</td>                <td>150577</td><td>89747</td></tr>
+<tr><td>Disco L496 - BG96 - Modem socket - with trace</td>           <td>158391</td><td>46836</td></tr>
+<tr><td>Disco L496 - BG96 - Modem socket - without trace</td>        <td>92961</td><td>46832</td></tr>
+<tr><td>Disco L496 - UG96 - LwIP - with trace</td>                   <td>193013</td><td>89512</td></tr>
+<tr><td>Disco L496 - UG96 - LwIP - without trace</td>                <td>141449</td><td>89492</td></tr>
+<tr><td>Disco L496 - UG96 - Modem socket - with trace</td>           <td>144315</td><td>46579</td></tr>
+<tr><td>Disco L496 - UG96 - Modem socket - without trace</td>        <td>83817</td><td>46575</td></tr>
+<tr><td>Disco IoT node - BG96 - Modem socket - with trace</td>       <td>154095</td><td>45260</td></tr>
+<tr><td>Disco IoT node - BG96 - Modem socket - without trace</td>    <td>89691</td><td>45256</td></tr>
+<tr><td>Disco IoT node - GM01Q - Modem socket - with trace</td>      <td>133551</td><td>44977</td></tr>
+<tr><td>Disco IoT node - GM01Q - Modem socket - without trace</td>   <td>77901</td><td>44973</td></tr>
+<tr><td>Disco L496 - GM01Q - LwIP - with trace</td>                  <td>188381</td><td>89488</td></tr>
+<tr><td>Disco L496 - GM01Q - LwIP - without trace</td>               <td>139585</td><td>89468</td></tr>
+<tr><td>Disco L496 - GM01Q - Modem socket - with trace</td>          <td>136367</td><td>46553</td></tr>
+<tr><td>Disco L496 - GM01Q - Modem socket - without trace</td>       <td>80713</td><td>46549</td></tr>
+</tbody>
+</table>
+<br>
+</div>
+
+<div class="topic3" id="limitations">
+<h4>Known limitations</h4>
+
+<br>
+<table class="tickets">
+<caption>Requirements not met or planned in a forthcoming release</caption>
+<thead>
+<tr><th>Ticket<br></th><th>Headline<br></th></tr>
+</thead>
+<tbody>
+<tr><td>52037</td><td>UG96 connect failure in LwIP, mpossible to debug through USB</td></tr>
+<tr><td>59232</td><td>Throughput is low in modem socket regarding LwIP</td></tr>
+<tr><td>59233</td><td>During throughput tests errors detected in modem socket (ok in LwIP)</td></tr>
+<tr><td>60018</td><td>Traces are sometime lost</td></tr>
+<tr><td>60050</td><td>Suspend/Resume (LwIP mode) must be ok for Low Power feature</td></tr>
+<tr><td>61044</td><td>Type compatibility with FreeRtos for TOTAL_HEAP_SIZE memory in the x-cube-cellular</td></tr>
+<tr><td>61077</td><td>Implement modem UART error callback	Defect</td></tr>
+<tr><td>61202</td><td>IPC timer expires when sending data with any timer option previously set (blocking socket)</td></tr>
+<tr><td>61213</td><td>Modem from time to time detach from the Network even if RSRQ is good</td></tr>
+<tr><td>61437</td><td>Error in storage Flash for menu config with ide SW4STM32</td></tr>
+<tr><td></td><td>Interfaces com_send, com_sendto or com_recv, com_recvfrom; even if application use MSG_DONTWAIT, application can be blocked on Mutex pre-emption if a command is already in progress at AT level.</td></tr>
+<tr><td></td><td>Only one PING at a time</td></tr>
+<tr><td></td><td>AN that explains how to port the SW on a new HW</td></tr>
+<tr><td></td><td>AN that explains how to support a new modem</td></tr>
+<tr><td></td><td>In LwIP switch between data / command mode (Signal strength not currently reported in LwIP during data transfert)</td></tr>
+<tr><td></td><td>Low Power in STM32 and Modem (PSM, eDRX feature)</td></tr>
+<tr><td></td><td>New HW support : Murata Type 1 SE</td></tr>
+<tr><td></td><td>Modem socket for TCP/UDP server</td></tr>
+<tr><td></td><td>UDP in not-connected mode is not yet supported by Sequans modem</td></tr>
+<tr><td></td><td>Due to Ping implementation in Sequans modem, first Ping result (out of a sequence of 10) is always nok</td></tr></tbody>
+</table>
+<br>
+
+</div>
+<div class="topic3" id="boards">
+<h4>Supported Devices and boards</h4>
+<ul>
+<li>P-L496G-CELL01</li>
+<li>P-L496G-CELL02</li>
+<li>X-NUCLEO-IKS01A2</li>
+<li>B-L475-IOT01A</li>
+<li>X-NUCLEAO-STMODA1</li>
+<li>MB1329B(Quectel BG96 modem on STMod+ board)</li>
+<li>32L496GDISCOVERY</li>
+<li>GM01Q-STMOD (Sequans GM01Q modem on STMod+ board)</li>
+</ul>
+
+</div>
+<div class="topic3" id="compat">
+<h4>Backward compatibility</h4>
+<p>Compliant with previous deliveries, BG96 modem FW must be updated to V7</p>
+
+</div>
+<div class="topic3" id="other_compat">
+<h4>Dependencies</h4>
+<p>This software release is compatible with: see Package (top) Release Note</p>
+</div>
+</div>
+
+<div class="topic1"><button id="filter_hist" onclick="toggle_history()">Show History</button>
+</div>
+<div id="history" class="topic1" hidden="">
+<h2>Update History</h2>
+
+<div id="release_container" class="topic1">
+<div class="topic2" id="identification">
+<h3>2.0.0 / W1845</h3>
+
+</div>
+<div class="topic3" id="changes">
+<h4>Main changes</h4>
+<p class="release_type">Maintenance release and product update</p>
+<div>
+<p>This V2.0.0 delivery is a new release with new features and new HW support</p>
+</div>
+
+<table class="tickets">
+<caption>Additional features</caption>
+<thead>
+<tr><th>Headline</th></tr>
+</thead>
+<tbody>
+<tr><td>New HW supported : Disco L475 IoT Node (only BG96 and modem socket mode) with embedded sensors management</td></tr>
+<tr><td>IAR, Keil, SW4STM32 for all HW (fully tested) and Truestudio (Only basic tests) for Disco IoT node</td></tr>
+<tr><td>Possibility to send commands (Ping, network status, modem configuration ...) through console (flexible and many commands available)</td></tr>
+<tr><td>Possibility to test the troughput and the latency</td></tr>
+<tr><td>Boot menu improvements</td></tr>
+<tr><td>MISRA 2012 compliant</td></tr>
+<tr><td>Bug correction regarding previous version (see tickets below)</td></tr>
+<tr><td>BG96 FW used is 02A07 (it can be seen in console at boot) it is possible to flash a new modem FW (see https://stm32-c2c.com/sim/boards/515/binaries)</td></tr></tbody>
+</table>
+<br>
+
+<table class="tickets">
+<caption>Fixed bugs list</caption>
+<thead>
+<tr><th>Ticket</th><th>Headline</th></tr>
+</thead>
+<tbody>
+<tr><td>41217</td><td>CGDCONT management with modem BG96</td></tr>
+<tr><td>42459</td><td>Datacache callback issue</td></tr>
+<tr><td>44814</td><td>Use sysctrl to select SIM at boot</td></tr>
+<tr><td>44817</td><td>Change RSSI with a value in dB or dBm</td></tr>
+<tr><td>44818</td><td>Add IP address to PING from boot menu</td></tr>
+<tr><td>44819</td><td>Add in boot menu the debug level</td></tr>
+<tr><td>45145</td><td>modem setting at boot</td></tr>
+<tr><td>45214</td><td>1- Back off timer due to Network : Wrong APN in TS 34. TS.34_4.0_REQ_011 : TS35_5.1_TC_008d</td></tr>
+<tr><td>45215</td><td>2- Back off timer due to Network Unreachable as defined in TS 34. TS.34_4.0_REQ_011 : TS35_5.1_TC_008g</td></tr>
+<tr><td>51231</td><td>useless inclusion (main.h) in FreeRTOSConfig.h triggering compilation error in the project export</td></tr>
+<tr><td>51566</td><td>Free RTOS test task / will you develop or simply remove the definition ?</td></tr>
+<tr><td>51568</td><td>Free RTOS default task : include for button under compilation switch </td></tr>
+<tr><td>51636</td><td>HTTP client compilation failure without MEMS</td></tr>
+<tr><td>51719</td><td>Sync on latest HAL CMSIS etc ... version</td></tr>
+<tr><td>51720</td><td>Delete clone Git repository and use official ones</td></tr>
+<tr><td>51923</td><td>Automatic SIM selection at boot</td></tr>
+<tr><td>52039</td><td>Stop using user button in the SW (Cde in TeraTerm instead)</td></tr>
+<tr><td>52040</td><td>Add method that allow to display current throughput</td></tr>
+<tr><td>52041</td><td>Support Disco IoT node HW in X-CUBE-CELLULAR</td></tr>
+<tr><td>52042</td><td>Select M1 and/or NBIoT modem bands in boot menu</td></tr>
+<tr><td>52475</td><td>new API to set its own credentials and preferences (APN, ...)</td></tr>
+<tr><td>52555</td><td>Add the ICCID (international SIM id) for the user application</td></tr>
+<tr><td>52566</td><td>wording on DC_COM_RADIO_LTE</td></tr>
+<tr><td>52642</td><td>IP@ is not notified from cellular in « socket modem » configuration</td></tr>
+<tr><td>53266</td><td>Equipment information (modem) for the applicative layer</td></tr>
+<tr><td>53522</td><td>Update Setup menu version</td></tr>
+<tr><td>53847</td><td>PPPOSIF_CONFIG_TIMEOUT_VALUE too short</td></tr>
+<tr><td>54008</td><td>clean up of Hw config file</td></tr>
+<tr><td>54287</td><td>Running without Hw Flow Control</td></tr>
+<tr><td>54487</td><td>IMSI trace (typo)</td></tr>
+<tr><td>54616</td><td>APN length to 32</td></tr>
+<tr><td>54822</td><td>Add embedded sensor support for Disco IoT Node board</td></tr>
+</tbody>
+</table>
+<br>
+
+</div>
+<div class="topic3" id="contents">
+<h4>Contents</h4>
+<table class="tickets">
+<caption>Components</caption>
+<thead>
+<tr><th>Name</th><th>Version</th><th>Release note</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>Drivers: Cellular framework </td><td>V2.0.0</td><td></td></tr>
+<tr><td>Application: HTTP Client (Grovestreams)</td><td></td><td></td></tr>
+<tr><td>Application: PING</td><td></td><td></td></tr>
+</tbody>
+</table>
+<br>
+</div>
+
+<div class="topic3" id="memory">
+<h4>Contents</h4>
+<table class="tickets">
+<caption>Memory</caption>
+<thead>
+<tr><th>What</th><th>Flash (in bytes)</th><th>RAM (in bytes)</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>Disco L496 - BG96 - LwIP - with trace</td><td>192050</td><td>85579</td></tr>
+<tr><td>Disco L496 - BG96 - LwIP - without trace</td><td>135340</td><td>85559</td></tr>
+<tr><td>Disco L496 - BG96 - Modem socket - with trace</td><td>138700</td><td>42648</td></tr>
+<tr><td>Disco L496 - BG96 - Modem socket - without trace</td><td>75726</td><td>42644</td></tr>
+<tr><td>Disco L496 - UG96 - LwIP - with trace</td><td>180214</td><td>85336</td></tr>
+<tr><td>Disco L496 - UG96 - LwIP - without trace</td><td>127256</td><td>85316</td></tr>
+<tr><td>Disco L496 - UG96 - Modem socket - with trace</td><td>126740</td><td>42407</td></tr>
+<tr><td>Disco L496 - UG96 - Modem socket - without trace</td><td>67514</td><td>42403</td></tr>
+<tr><td>Disco IoT node - BG96 - Modem socket - with trace</td><td>135932</td><td>42488</td></tr>
+<tr><td>Disco IoT node - BG96 - Modem socket - without trace</td><td>72936</td><td>42484</td></tr>
+</tbody>
+</table>
+<br>
+</div>
+
+<div class="topic3" id="limitations">
+<h4>Known limitations</h4>
+
+<br>
+<table class="tickets">
+<caption>Requirements not met or planned in a forthcoming release</caption>
+<thead>
+<tr><th>Ticket<br></th><th>Headline<br></th></tr>
+</thead>
+<tbody>
+<tr><td>44827</td><td>Remove label remap because of new ioc</td></tr>
+<tr><td>51931</td><td>Add API to switch off the device</td></tr>
+<tr><td>53765</td><td>No more data received from socket API triggering a Would block for blocking socket</td></tr>
+<tr><td>44810</td><td>Modem socket full feature</td></tr>
+<tr><td>44826</td><td>Activate RING indicator</td></tr>
+<tr><td>45354</td><td>Create a dedicated service to management LED network access</td></tr>
+<tr><td>51074</td><td>Utilities, cellular portability</td></tr>
+<tr><td>51680</td><td>LED1 usage in the cellular</td></tr>
+<tr><td>52037</td><td>UG96 connect failure in LwIP, impossible to debug through USB</td></tr>
+<tr><td>52131</td><td>Trace AT commands by printf</td></tr>
+<tr><td>52806</td><td>Username/Password support for cellular data</td></tr>
+<tr><td>54023</td><td>what about project config file (which is empty) ?</td></tr>
+<tr><td>54544</td><td>cellular deinitialization</td></tr>
+<tr><td></td><td>Interfaces com_send or com_recv; even if application use MSG_DONTWAIT, application can be blocked on Mutex pre-emption if a command is already in progress at AT level.</td></tr>
+<tr><td></td><td>Interrupts loss may occur when HW flow controls not activated (by default activated)</td></tr>
+<tr><td></td><td>Only one PING at a time</td></tr>
+<tr><td></td><td>Not possible to set Username / Password for PDP context (except in source and then rebuild)</td></tr>
+<tr><td></td><td>AN that explains how to port the SW on a new HW</td></tr>
+<tr><td></td><td>In LwIP switch between data / command mode (Signal strength not currently reported in LwIP during data transfert)</td></tr>
+<tr><td></td><td>Low Power in STM32 and Modem (PSM, eDRX feature)</td></tr>
+<tr><td></td><td>New HW support</td></tr>
+</tbody>
+</table>
+<br>
+
+</div>
+<div class="topic3" id="boards">
+<h4>Supported Devices and boards</h4>
+<ul>
+<li>P-L496G-CELL01</li>
+<li>P-L496G-CELL02</li>
+<li>X-NUCLEO-IKS01A2</li>
+<li>B-L475-IOT01A</li>
+<li>X-NUCLEAO-STMODA1</li>
+<li>MB1329B(BG96)</li>
+</ul>
+
+</div>
+<div class="topic3" id="compat">
+<h4>Backward compatibility</h4>
+<p>Compliant with previous deliveries</p>
+
+</div>
+<div class="topic3" id="other_compat">
+<h4>Dependencies</h4>
+<p>This software release is compatible with: see Package (top) Release Note</p>
+</div>
+</div>
+
+<div id="release_container" class="topic1">
+<div class="topic2" id="identification">
+<h3>V1.1.1 / W1832</h3>
+</div>
+<div class="topic3" id="changes">
+<h4>Main changes</h4>
+<p class="release_type">Patch release</p>
+<p>Bug fixing of V1.1.0</p>
+</div>
+<div class="topic3" id="contents">
+<h4>Contents</h4>
+<ul>
+<li>This is not a full delivery but only a patch (overwrite 1.1.0 files)</li>
+<li>Fixed bugs and improvements list:</li>
+<li>51056   Assertion raised link to access of LwIP seg/buf/pcb</li>
+<li>51649    IN LwIP DNS reported value is 0.0.0.0</li>
+<li>51529    Remove date information in setup menu</li>
+<li>50387   Impossible to reconnect in LwIP after brutal close by the remote</li>
+<li>Note, 50387 was not listed in V1.1.0 but already corrected, so listed here</li>
+<li>Only a reduced test plan has been run for this patch delivery</li>
+</ul>
+</div>
+<div class="topic3" id="limitations">
+<h4>Known limitations</h4>
+<ul>
+<li>Change Request for next releases:</li>
+<li>None</li>
+<li>Restrictions:</li>
+<li>Interfaces com_send or com_recv; even if application use MSG_DONTWAIT, application can be blocked on Mutex pre-emption if a command is already in progress at AT level.</li>
+<li>Interrupts loss may occur when HW flow controls not activated (by default activated)</li>
+<li>Only one PING at a time.</li>
+<li>For COM API, additional restrictions are described in file com_sockets_ip_modem.h</li>
+<li>Bugs:</li>
+<li>No known bug</li>
+<li>Information:</li>
+<li>SW is delivered with the trace activated.</li>
+</ul>
+<p>Same as previous version</p>
+</div>
+<div class="topic3" id="boards">
+<h4>Supported Devices and boards</h4>
+<p>Same as previous version</p>
+</div>
+<div class="topic3" id="compat">
+<h4>Backward compatibility</h4>
+<p>Same as previous version</p>
+</div>
+<div class="topic3" id="other_compat">
+<h4>Dependencies</h4>
+<p>Same as previous version</p>
+</div>
+</div>
+
+<div id="release_container" class="topic1">
+<div class="topic2" id="identification">
+<h3>V1.1.0 / W1829</h3>
+</div>
+<div class="topic3" id="changes">
+<h4>Main changes</h4>
+<p class="release_type">Patch release</p>
+<p>Improvement & bug fixing of V1.0.0</p>
+</div>
+<div class="topic3" id="contents">
+<h4>Contents</h4>
+<ul>
+<li>Fixed bugs and improvements list:</li>
+<li>44813 : CID = 0 management</li>
+<li>50329 : The SW is blocked when ping in LwIP mode</li>
+<li>50330 : Float with SW4STM32</li>
+<li>50331 : Warning when Stack Analysis activated</li>
+<li>50333 : MDK / Keil : link fails when LwIP is not used</li>
+<li>50334 : No menu when trace deactivated</li>
+<li>50335 : Display ping result even if trace is deactivated</li>
+<li>50336 : Stack Analysis called twice by Data Cache</li>
+<li>50338 : Multi socket does not work</li>
+<li>50340 : Embeded SIM selection not possible</li>
+<li>50341 : Display correct version & date in the boot log</li>
+<li>50378 : At boot UART IRQ failed because IPC not yet initialized</li>
+<li>50380 : LwIP timer to maintain socket before deleting is too long</li>
+<li>Better integration of SW4STM32 and MDK IDEs</li>
+<li>Upgraded test plan</li>
+</ul>
+</div>
+<div class="topic3" id="limitations">
+<h4>Known limitations</h4>
+<ul>
+<li>Change Request for next releases:</li>
+<li>In modem socket mode (IP stack used is in the modem) only TCP client is available (i.e. TCP server and UDP (client & server) are not yet available).</li>
+<li>In modem socket only IPv4 is supported.</li>
+<li>In LwIP mode only IPv4 has been tested (IPV6 is supported).</li>
+<li>For modem DFOTA,  STM32 board must be started with option 2 (modem boot) before using USB of modem board to start the DFOTA</li>
+<li>To modify PIN code a recompile is needed. In case of usage be careful to put the correct PIN, if not SIM card can be blocked</li>
+<li>PING address is hardcoded so recompile is needed to change the ping server address</li>
+<li>In current implementation, when the com_socket_send() function returns successfully, it does not mean that data has been sent to the remote device nor acknowledged by the remote. It simply means that data has been pushed to the Modem buffer but will be sent at first opportunity.</li>
+<li>Restrictions:</li>
+<li>Interfaces com_send or com_recv; even if application use MSG_DONTWAIT, application can be blocked on Mutex pre-emption if a command is already in progress at AT level.</li>
+<li>Interrupts loss may occur when HW flow controls not activated (by default activated)</li>
+<li>Only one PING at a time.</li>
+<li>For COM API, additional restrictions are described in file com_sockets_ip_modem.h</li>
+<li>Bugs:</li>
+<li>In LwIP mode when connection is lost with server, next connection is always refused. So usage of LwIP mode can be altered regarding the quality of the connection.</li>
+<li>Information:</li>
+<li>SW is delivered with the trace activated.</li>
+</ul>
+</div>
+<div class="topic3" id="boards">
+<h4>Supported Devices and boards</h4>
+<p>Same as previous version</p>
+</div>
+<div class="topic3" id="compat">
+<h4>Backward compatibility</h4>
+<p>NA</p>
+</div>
+<div class="topic3" id="other_compat">
+<h4>Dependencies</h4>
+<p>NA</p>
+</div>
+</div>
+
+<div id="release_container" class="topic1">
+<div class="topic2" id="identification">
+<h3>V1.0.0 / W1826</h3>
+</div>
+<div class="topic3" id="changes">
+<h4>Main changes</h4>
+<p class="release_type">First release</p>
+<p>Original delivery</p>
+</div>
+<div class="topic3" id="contents">
+<h4>Contents</h4>
+<p>First Cellular framework</p>
+</div>
+<div class="topic3" id="limitations">
+<h4>Known limitations</h4>
+<ul>
+<li>In modem socket mode (IP stack used is in the modem) only TCP client is available (i.e. TCP server and UDP (client & server) are not yet available.</li>
+<li>Only IPv4 is supported on modem socket and on LwIP mode only IPv4 has been tested.</li>
+<li>When compiling in MDK-ARM compiler in Modem socket mode, some folders need to be removed from the build (Note that, it is not necessary for other ones). In plf_feature.h, use define USE_SOCKETS_MODEM for USE_SOCKETS_TYPE. Folders to be remove from build Middleware/Net/LwIP/api, LwIP/netif/ppp, LwIP/core, LwIP/core/ipv4, LwIP/system/OS</li>
+<li>For modem DFOTA,  STM32 board must be started with option 2 (modem boot) before using USB of modem board </li>
+<li>To modify PIN code a recompile is needed. In case of usage be careful to put the correct PIN, if not SIM card can be blocked</li>
+<li>PING address is hardcoded so recompile is needed to change the ping server address</li>
+<li>Only one PING at a time.</li>
+<li>SW is delivered with the trace activated</li>
+<li>Interfaces com_send or com_recv; even if application use MSG_DONTWAIT, application can be blocked on Mutex pre-emption if a command is already in progress at AT level.</li>
+<li>Interrupts loss may occur when HW flow controls not activated (by default activated)</li>
+<li>In current implementation, when the com_socket_send() function returns successfully, it does not mean that data has been sent to the remote device nor acknowledged by the remote. It simply means that data has been pushed to the Modem buffer but will be sent at first opportunity.</li>
+<li>COM additional restrictions are described in file com_sockets_ip_modem.h</li>
+</ul>
+</div>
+<div class="topic3" id="boards">
+<h4>Supported Devices and boards</h4>
+<ul>
+<li>P-L496G-CELL01</li>
+<li>P-L496G-CELL02</li>
+<li>X-NUCLEO-IKS01A2</li>
+</ul>
+</div>
+<div class="topic3" id="compat">
+<h4>Backward compatibility</h4>
+<p>NA</p>
+</div>
+<div class="topic3" id="other_compat">
+<h4>Dependencies</h4>
+<p>NA</p>
+</div>
+</div>
+
+
+
+<br>
+<br>
+<br>
+</div>
+<div id="product_doc" class="topic1">
+<hr>
+<p class="footer_text">For complete documentation on STM32 Microcontrollers, visit: 
+<a href="http://www.st.com/STM32" target="_blank">http://www.st.com/</a></p>
+
+</div>
+</div>
+</body>
+</html>

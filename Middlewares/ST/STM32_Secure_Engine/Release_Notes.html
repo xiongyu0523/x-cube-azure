@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+    <link rel="stylesheet" href="../../../_htmresc/rel_note.css">
+    <title>Release Notes for STM32 Secure Engine</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+var toggle_hist_disp = true;
+function toggle_history()
+{
+if (toggle_hist_disp)
+{
+toggle_hist_disp = false;
+var filter_off_text = document.createTextNode("Hide History");
+document.getElementById('filter_hist').innerHTML = "";
+document.getElementById('filter_hist').appendChild(filter_off_text);
+document.getElementById("history").hidden = false;
+}
+else
+{
+toggle_hist_disp = true;
+var filter_on_text = document.createTextNode("Show History");
+document.getElementById('filter_hist').innerHTML = "";
+document.getElementById('filter_hist').appendChild(filter_on_text);
+document.getElementById("history").hidden = true;
+}
+}</script>
+    <div class="Section1">
+      <div id="header">
+        <h1 style="text-align: left;"><span style="font-size: 8pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;; color: blue;"><a
+
+              href="file:///C:/git/sbsfu_master/Firmware/Release_Notes.html">Back
+              to Release page</a></span></h1>
+        <h1>Release Notes for STM32 Secure Engine</h1>
+        <p>Copyright 2017 STMicroelectronics</p>
+        <a href="#" class="logo"><img src="../../../_htmresc/st_logo.png" alt="ST logo"></a>
+      </div>
+      <div id="license" class="topic1">
+        <h2>License</h2>
+        <p>Licensed under Ultimate Liberty license SLA0044 (the "License"). You
+          may not use this package except in compliance with the License. You
+          may obtain a copy of the License at:</p>
+        <p class="license_url"><a href="http://www.st.com/software_license_agreement_liberty_v2"
+
+            target="_blank">http://www.st.com/SLA0044</a></p>
+      </div>
+      <div class="topic1" id="purpose"><br>
+      </div>
+      <div id="release_container" class="topic1">
+        <div class="topic2" id="identification">
+          <h3 style="background: rgb(51, 102, 255) none repeat scroll 0% 50%; -moz-background-clip: initial; -moz-background-origin: initial; -moz-background-inline-policy: initial; margin-right: 500pt; width: 200px;"><span
+
+              style="font-size: 10pt; font-family: Arial; color: white;">V1.2.0
+              / 14-December-2018</span></h3>
+        </div>
+        <div class="topic3" id="changes">
+          <h4>Main changes</h4>
+          <p class="release_type"><span style="background-color: yellow;"></span>Maintenance
+            release</p>
+          <p class="release_type"><br>
+          </p>
+          <table class="tickets">
+            <caption>Additional features<br>
+            </caption>
+            <thead>
+              <tr>
+                <th>Headline</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>prepareimage/key/translate_key scripts improvements : <br>
+                  &nbsp; - Quicker execution timing.<br>
+                  &nbsp; - Support of big elf in order to be able to flash SBSFU
+                  + UserApp from IDE : refer to AN5056 for more details. <br>
+                  &nbsp; - Adapation for ARM V6M architecture (cortex MO+)<br>
+                  &nbsp; - Remove support of ciphertext stealing : 16 bytes
+                  alignment ensure with linker command files during UserApp
+                  build process.<br>
+                </td>
+              </tr>
+              <tr>
+                <td>Add&nbsp; support of SE service calls from unprivileged part
+                  of application : SE_APP_GET_ACTIVE_FW_INFO.</td>
+              </tr>
+              <tr>
+                <td>Add mapping_export.h for IAR and SW4STM32 toolchains to
+                  avoid mapping symbols inclusion into *.c files.</td>
+              </tr>
+              <tr>
+                <td>Security controls added : <br>
+                  &nbsp; - Check the mapping of the data given as parameters to
+                  Secure Engine services (SE_BufferCheck_SBSFU() /
+                  SE_BufferCheck_in_se_ram()).<br>
+                  &nbsp; - Clean Secure Engine RAM data (SE_LL_CORE_Cleanup())
+                  when leaving SBSFU (SE_LockRestrictServices()).</td>
+              </tr>
+            </tbody>
+          </table>
+          <h4><br>
+          </h4>
+          <table class="tickets">
+            <caption>Fixed bugs list</caption>
+            <thead>
+              <tr>
+                <th>Headline</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>None</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="topic1"><button id="filter_hist" onclick="toggle_history()">Show
+          History</button> </div>
+      <div id="history" class="topic1" hidden=""> <span style="font-size: 10pt; font-family: Verdana;"><br>
+        </span>
+                        <h3 style="background: rgb(51, 102, 255) none repeat scroll 0% 50%; -moz-background-clip: initial; -moz-background-origin: initial; -moz-background-inline-policy: initial; margin-right: 500pt; width: 171px;"><span
+
+                            style="font-size: 10pt; font-family: Arial; color: white;">V1.1.0
+                            / 20-April-2018<o:p></o:p></span></h3>
+                        <p class="MsoNormal" style="margin: 4.5pt 0cm 4.5pt 18pt;"><b
+
+                            style=""><u><span style="font-size: 10pt; font-family: Verdana; color: black;">Main
+                                Changes<o:p></o:p></span></u></b></p>
+                        <ul style="margin-top: 0cm;" type="square">
+                          <li class="MsoNormal" style="color: black; margin-top: 4.5pt; margin-bottom: 4.5pt;"><span
+
+                              style="font-size: 10pt; font-family: Verdana;">Multiple
+                              crypto scheme implemented under compilation switch
+                              (se_crypto_config.h) :</span></li>
+                          <ul>
+                            <li class="MsoNormal" style="color: black; margin-top: 4.5pt; margin-bottom: 4.5pt;"><span
+
+                                style="font-size: 10pt; font-family: Verdana;">SECBOOT_AES128_GCM_AES128_GCM_AES128_GCM
+                                : symmetric crypto.&nbsp;</span></li>
+                            <li class="MsoNormal" style="color: black; margin-top: 4.5pt; margin-bottom: 4.5pt;"><span
+
+                                style="font-size: 10pt; font-family: Verdana;">SECBOOT_ECCDSA_WITH_AES128_CBC_SHA256
+                                (default config) : asymmetric crypto with
+                                encrypted (AES128-CBC) Firmware.&nbsp;</span></li>
+                            <li class="MsoNormal" style="color: black; margin-top: 4.5pt; margin-bottom: 4.5pt;"><span
+
+                                style="font-size: 10pt; font-family: Verdana;">SECBOOT_ECCDSA_WITHOUT_ENCRYPT_SHA256&nbsp;</span><span
+
+                                style="font-size: 10pt; font-family: Verdana;">:
+                                asymmetric crypto without firmware encryption.</span></li>
+                          </ul>
+                        </ul>
+                        <span style="font-size: 10pt; font-family: Verdana;"></span>
+                        <ul style="margin-top: 0cm;" type="square">
+                          <li class="MsoNormal" style="color: black; margin-top: 4.5pt; margin-bottom: 4.5pt;"><span
+
+                              style="font-size: 10pt; font-family: Verdana;">Build
+                              process modification : scripts added in
+                              Utilities/KeysAndImages called during :&nbsp;</span></li>
+                          <ul>
+                            <li class="MsoNormal" style="color: black; margin-top: 4.5pt; margin-bottom: 4.5pt;"><span
+
+                                style="font-size: 10pt; font-family: Verdana;">SECoreBin
+                                build for key generation.</span></li>
+                            <li class="MsoNormal" style="color: black; margin-top: 4.5pt; margin-bottom: 4.5pt;"><span
+
+                                style="font-size: 10pt; font-family: Verdana;">UserApp
+                                build for firmware encryption.</span></li>
+                            <li class="MsoNormal" style="color: black; margin-top: 4.5pt; margin-bottom: 4.5pt;"><span
+
+                                style="font-size: 10pt; font-family: Verdana;">Windows
+executable
+                                version of the python&nbsp;scripts available :
+                                This is now the default tooling for pre/post
+                                build actions (so python
+                                not mandatory any more)</span></li>
+                          </ul>
+                        </ul>
+                        <ul style="margin-top: 0cm;" type="square">
+                          <li class="MsoNormal" style="color: black; margin-top: 4.5pt; margin-bottom: 4.5pt;"><span
+
+                              style="font-size: 10pt; font-family: Verdana;">Secure
+                              Engine now using its own stack inside protected
+                              area</span></li>
+                          <li class="MsoNormal" style="color: black; margin-top: 4.5pt; margin-bottom: 4.5pt;"><span
+
+                              style="font-family: Verdana; font-size: 10pt;">Files
+                              structure updated to provide more feature
+                              modularity and feature customization flexibility</span></li>
+                        </ul>
+                        <span style="font-size: 10pt; font-family: Verdana;"></span><span
+
+                          style="font-size: 10pt; font-family: Verdana;"></span>
+                        <h3 style="background: rgb(51, 102, 255) none repeat scroll 0% 50%; -moz-background-clip: initial; -moz-background-origin: initial; -moz-background-inline-policy: initial; margin-right: 500pt; width: 171px;"><span
+
+                            style="font-size: 10pt; font-family: Arial; color: white;">V1.0.0
+                            / 1-December-2017<o:p></o:p></span></h3>
+                        <p class="MsoNormal" style="margin: 4.5pt 0cm 4.5pt 18pt;"><b
+
+                            style=""><u><span style="font-size: 10pt; font-family: Verdana; color: black;">Main
+                                Changes<o:p></o:p></span></u></b></p>
+                        <span style="font-size: 10pt; font-family: Verdana;"></span>
+                        <ul style="margin-top: 0cm;" type="square">
+                          <li class="MsoNormal" style="color: black; margin-top: 4.5pt; margin-bottom: 4.5pt;"><span
+
+                              style="font-size: 10pt; font-family: Verdana;">First
+                              official release</span><span style="font-family: Verdana; font-size: 10pt;"></span><span
+
+                              style="font-size: 10pt; font-family: Verdana;"></span></li>
+                        </ul>
+
+      </div>
+      <div id="product_doc" class="topic1">
+        <hr>
+        <p class="footer_text">For complete documentation on STM32&nbsp;
+          Microcontrollers, visit: <span style="font-size: 10pt; font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;"><u><span
+
+                style="color: blue;"><a href="http://www.st.com/internet/mcu/family/141.jsp"
+
+                  target="_blank">www.st.com/STM32</a></span></u></span></p>
+      </div>
+    </div>
+  </body>
+</html>

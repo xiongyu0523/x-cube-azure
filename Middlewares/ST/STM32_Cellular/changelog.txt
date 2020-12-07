@@ -1,0 +1,43 @@
+  @verbatim
+  ******************************************************************************                                                             
+  * @file    changelog.txt
+  * @author  MCD Application Team
+  * @brief   This file lists the modifications done on x-cube-cellular Middleware 
+  *          for an integration into x-cube-cloud expansion packages.
+  *          For more details on x-cube-cellular implementation on STM32Cube, 
+  *          please refer to UM2567 "Getting started" and UM2426 for detailed
+  *          explanations with the cellular connectivity.
+  ******************************************************************************
+  @endverbatim
+
+3.0.0
+=====
+
++ Release integration date : May 25 th, 2019
+
++ ADDITIONAL CONTENT and FEATURES (onto V3.0.0 x-cube-cellular)
+  - x-cube-cellular structuration into a ST Middleware
+  - UDP client in LwIP modem mode
+  - Cellular stop (modem switch off) for BSD-like compatibility
+  - Features improvements
+  - MISRA 2012, MCUAstyle and CodeSonar improvements
+
++ DEFINES (portability to x-cube-cloud)
+  - define USE_MODEM_BG96 in the IDE (preprocessing) : modem selection by compilation switch.
+  - define PARTIAL_HEAP_SIZE in the IDE (preprocessing) : dynamic memory setting from IDE
+  - define USE_COM_PING to 1 : PING service is available through COM API
+  - define USE_ECHO_CLIENT, USE_HTTP_CLIENT, USE_PING_CLIENT, USE_DC_EMUL, USE_DC_MEMS, USE_CMD_CONSOLE to 0 : remove test applications and console
+
++ FIXES
+  - cellular_service_task.c : force 2G PS attachment at switch on whatever the network mode operator on the field
+  - com_sockets_ip_modem.c : do not ignore IP @ with one of its byte being null (com_convert_IPString_to_sockaddr())
+  - com_sockets_ip_modem.c : socket has a wrong error code on timeout (com_recv_ip_modem())
+  - com_sockets_ip_modem.c : wrong endianness of the port number in UDP, modem socket mode (com_convert_IPString_to_sockaddr())
+
++ RUNNING RESTRICTIONS
+  - working without statistics on sockets
+  - boot menu is not available
+
++ KNOWN LIMITATIONS
+  - UG96 HW flow control is by default activated and could lead sometimes to issues.
+  - Shutdown for BSD-like compatibility of the cellular

@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?fileVersion 4.0.0?><cproject storage_type_id="org.eclipse.cdt.core.XmlProjectDescriptionStorage">
+	<storageModule moduleId="org.eclipse.cdt.core.settings">
+		<cconfiguration id="fr.ac6.managedbuild.config.gnu.cross.exe.debug.1641714255">
+			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="fr.ac6.managedbuild.config.gnu.cross.exe.debug.1641714255" moduleId="org.eclipse.cdt.core.settings" name="Debug">
+				<externalSettings/>
+				<extensions>
+					<extension id="org.eclipse.cdt.core.ELF" point="org.eclipse.cdt.core.BinaryParser"/>
+					<extension id="org.eclipse.cdt.core.GASErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GmakeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GLDErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.CWDLocator" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+				</extensions>
+			</storageModule>
+			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+				<!-- SBSFU configuration commented because not enough Flash memory on L496
+        <configuration artifactExtension="elf" artifactName="${ProjName}" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.exe" buildProperties="org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.exe,org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.debug" cleanCommand="rm -rf" description="" id="fr.ac6.managedbuild.config.gnu.cross.exe.debug.1641714255" name="Debug" parent="fr.ac6.managedbuild.config.gnu.cross.exe.debug" postannouncebuildStep="Generating binary and Printing size information:" postbuildStep="arm-none-eabi-objcopy -O binary &quot;${BuildArtifactFileBaseName}.elf&quot; &quot;${BuildArtifactFileBaseName}.bin&quot; &amp;&amp; arm-none-eabi-size &quot;${BuildArtifactFileName}&quot; &amp;&amp; &quot;../../../../../BootLoader_OSC/2_Images_SECoreBin/SW4STM32/postbuild.sh&quot; &quot;../..&quot; &quot;./${BuildArtifactFileBaseName}.elf&quot; &quot;./${BuildArtifactFileBaseName}.bin&quot; &quot;1&quot; bigelf">
+         -->
+				<configuration artifactExtension="elf" artifactName="${ProjName}" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.exe" buildProperties="org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.exe,org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.debug" cleanCommand="rm -rf" description="" id="fr.ac6.managedbuild.config.gnu.cross.exe.debug.1641714255" name="Debug" parent="fr.ac6.managedbuild.config.gnu.cross.exe.debug" postannouncebuildStep="Generating binary and Printing size information:" postbuildStep="arm-none-eabi-objcopy -O binary &quot;${BuildArtifactFileBaseName}.elf&quot; &quot;${BuildArtifactFileBaseName}.bin&quot; &amp;&amp; arm-none-eabi-size &quot;${BuildArtifactFileName}&quot;">
+					<folderInfo id="fr.ac6.managedbuild.config.gnu.cross.exe.debug.1641714255." name="/" resourcePath="">
+						<toolChain id="fr.ac6.managedbuild.toolchain.gnu.cross.exe.debug.266910753" name="Ac6 STM32 MCU GCC" superClass="fr.ac6.managedbuild.toolchain.gnu.cross.exe.debug">
+							<option id="fr.ac6.managedbuild.option.gnu.cross.prefix.1282208867" name="Prefix" superClass="fr.ac6.managedbuild.option.gnu.cross.prefix" value="arm-none-eabi-" valueType="string"/>
+							<option id="fr.ac6.managedbuild.option.gnu.cross.mcu.510309286" name="Mcu" superClass="fr.ac6.managedbuild.option.gnu.cross.mcu" value="STM32L496AGIx" valueType="string"/>
+							<option id="fr.ac6.managedbuild.option.gnu.cross.board.1581096089" name="Board" superClass="fr.ac6.managedbuild.option.gnu.cross.board" value="STM32L496G-DISCO" valueType="string"/>
+							<option id="fr.ac6.managedbuild.option.gnu.cross.instructionSet.748254104" name="Instruction Set" superClass="fr.ac6.managedbuild.option.gnu.cross.instructionSet" value="fr.ac6.managedbuild.option.gnu.cross.instructionSet.thumbII" valueType="enumerated"/>
+							<option id="fr.ac6.managedbuild.option.gnu.cross.fpu.1079462290" name="Floating point hardware" superClass="fr.ac6.managedbuild.option.gnu.cross.fpu" value="fr.ac6.managedbuild.option.gnu.cross.fpu.fpv4-sp-d16" valueType="enumerated"/>
+							<option id="fr.ac6.managedbuild.option.gnu.cross.floatabi.2094412196" name="Floating-point ABI" superClass="fr.ac6.managedbuild.option.gnu.cross.floatabi" value="fr.ac6.managedbuild.option.gnu.cross.floatabi.hard" valueType="enumerated"/>
+							<targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.ELF" id="fr.ac6.managedbuild.targetPlatform.gnu.cross.456886693" isAbstract="false" osList="all" superClass="fr.ac6.managedbuild.targetPlatform.gnu.cross"/>
+							<builder buildPath="${workspace_loc:/STM32L496G-Discovery_Azure}/Debug" id="fr.ac6.managedbuild.builder.gnu.cross.1085359562" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="Gnu Make Builder" superClass="fr.ac6.managedbuild.builder.gnu.cross">
+								<outputEntries>
+									<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="outputPath" name="Debug"/>
+								</outputEntries>
+							</builder>
+							<tool id="fr.ac6.managedbuild.tool.gnu.cross.c.compiler.2112236808" name="MCU GCC Compiler" superClass="fr.ac6.managedbuild.tool.gnu.cross.c.compiler">
+								<option defaultValue="gnu.c.optimization.level.none" id="fr.ac6.managedbuild.gnu.c.compiler.option.optimization.level.2066617164" name="Optimization Level" superClass="fr.ac6.managedbuild.gnu.c.compiler.option.optimization.level" useByScannerDiscovery="false" value="fr.ac6.managedbuild.gnu.c.optimization.level.size" valueType="enumerated"/>
+								<option id="gnu.c.compiler.option.debugging.level.1041185577" name="Debug Level" superClass="gnu.c.compiler.option.debugging.level" useByScannerDiscovery="false" value="gnu.c.debugging.level.max" valueType="enumerated"/>
+								<option id="gnu.c.compiler.option.include.paths.3632304" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" useByScannerDiscovery="false" valueType="includePath">
+									<listOptionValue builtIn="false" value="../../../../../../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include"/>
+									<listOptionValue builtIn="false" value="../../../../../../../../Drivers/STM32L4xx_HAL_Driver/Inc"/>
+									<listOptionValue builtIn="false" value="../../../../../../../../Drivers/BSP/STM32L496G-Discovery"/>
+									<listOptionValue builtIn="false" value="../../../Inc"/>
+									<listOptionValue builtIn="false" value="../../../../../../../../Middlewares/ST/STM32_Connect_Library/Includes"/>
+									<listOptionValue builtIn="false" value="../../../../../../../../Middlewares/ST/STM32_Secure_Engine/Core"/>
+									<listOptionValue builtIn="false" value="../../../../../BootLoader_OSC/2_Images_SECoreBin/Inc"/>
+									<listOptionValue builtIn="false" value="../../../../../BootLoader_OSC/2_Images_SBSFU/SBSFU/App"/>
+									<listOptionValue builtIn="false" value="../../../../../BootLoader_OSC/Linker_Common/SW4STM32"/>
+									<listOptionValue builtIn="false" value="../../../../../../../Misc_Utils/Inc"/>
+									<listOptionValue builtIn="false" value="../../../../../../../../Utilities/Time"/>
+									<listOptionValue builtIn="false" value="../../../../../../../../Utilities/CLD_utils/http_lib"/>
+									<listOptionValue builtIn="false" value="../../../../../../../../Middlewares/Third_Party/azure-iot-sdk-c/umqtt/inc"/>
+									<listOptionValue builtIn="false" value="../../../../../../../../Middlewares/Third_Party/azure-iot-sdk-c/iothub_client/inc"/>
+									<listOptionValue builtIn="false" value="../../../../../../../../Middlewares/Third_Party/azure-iot-sdk-c/iothub_client/samples/STM32Cube_sample"/>
+									<listOptionValue builtIn="false" value="../../../../../../../../Middlewares/Third_Party/azure-iot-sdk-c/provisioning_client/adapters"/>
+									<listOptionValue builtIn="false" value="../../../../../../../../Middlewares/Third_Party/azure-iot-sdk-c/provisioning_client/inc"/>
+									<listOptionValue builtIn="false" value="../../../../../../../../Middlewares/Third_Party/azure-iot-sdk-c/provisioning_client/deps/RIoT/Emulator/RIoT"/>
+									<listOptionValue builtIn="false" value="../../../../../../../../Middlewares/Third_Party/azure-iot-sdk-c/provisioning_client/deps/RIoT/Emulator/DICE"/>
+									<listOptionValue builtIn="false" value="../../../../../../../../Middlewares/Third_Party/azure-iot-sdk-c/provisioning_client/deps/RIoT/Emulator/RIoT/RIoTCrypt/include"/>
+									<listOptionValue builtIn="false" value="../../../../../../../../Middlewares/Third_Party/azure-iot-sdk-c/c-utility/inc"/>
+									<listOptionValue builtIn="false" value="../../../../../../../../Middlewares/Third_Party/azure-iot-sdk-c/c-utility/pal/generic"/>
+									<listOptionValue builtIn="false" value="../../../../../../../../Middlewares/Third_Party/azure-iot-sdk-c/serializer/inc"/>
+									<listOptionValue builtIn="false" value="../../../../../../../../Middlewares/Third_Party/azure-iot-sdk-c/deps/parson"/>
+									<listOptionValue builtIn="false" value="../../../../../../../../Middlewares/Third_Party/mbedTLS/include"/>
+									<listOptionValue builtIn="false" value="../../../../../../../../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F"/>
+									<listOptionValue builtIn="false" value="../../../../../../../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS"/>
+									<listOptionValue builtIn="false" value="../../../../../../../../Middlewares/Third_Party/FreeRTOS/Source/include"/>
+									<listOptionValue builtIn="false" value="../../../../../../../../Middlewares/Third_Party/FreeRTOS/Source"/>
+									<listOptionValue builtIn="false" value="../../../../../../../../Middlewares/ST/STM32_Cellular/Core/Cellular_Service/AT_Service/Core/Inc"/>
+									<listOptionValue builtIn="false" value="../../../../../../../../Drivers/BSP/Modems/UG96_STMOD+/AT_modem_ug96/Inc"/>
+									<listOptionValue builtIn="false" value="../../../../../../../../Drivers/BSP/Modems/BG96_STMOD+/AT_modem_bg96/Inc"/>
+									<listOptionValue builtIn="false" value="../../../../../../../../Middlewares/ST/STM32_Cellular/Core/Cellular_Service/Radio_Service/Cellular/Inc"/>
+									<listOptionValue builtIn="false" value="../../../../../../../../Middlewares/ST/STM32_Cellular/Core/Cellular_Api/Com/Inc"/>
+									<listOptionValue builtIn="false" value="../../../../../../../../Middlewares/ST/STM32_Cellular/Core/Cellular_Api/Data_Cache/Inc"/>
+									<listOptionValue builtIn="false" value="../../../../../../../../Middlewares/ST/STM32_Cellular/Interface/IPC/Inc"/>
+									<listOptionValue builtIn="false" value="../../../../../../../../Middlewares/ST/STM32_Cellular/Core/Cellular_Api/Nifman/Inc"/>
+									<listOptionValue builtIn="false" value="../../../../../../../../Middlewares/ST/STM32_Cellular/Porting/LwIP_Porting/PPPosif/Inc"/>
+									<listOptionValue builtIn="false" value="../../../../../../../../Middlewares/ST/STM32_Cellular/Core/Cellular_Api/Radio_Management/Inc"/>
+									<listOptionValue builtIn="false" value="../../../../../../../../Middlewares/ST/STM32_Cellular/Utilities/Misc/Error_Handler/Inc"/>
+									<listOptionValue builtIn="false" value="../../../../../../../../Middlewares/ST/STM32_Cellular/Utilities/Misc/Trace_Interface/Inc"/>
+									<listOptionValue builtIn="false" value="../../../../../../../../Middlewares/ST/STM32_Cellular/Utilities/Misc/Stack_Analysis/Inc"/>
+									<listOptionValue builtIn="false" value="../../../../../../../../Middlewares/ST/STM32_Cellular/Core/Cellular_Api/Cellular_Init/Inc"/>
+									<listOptionValue builtIn="false" value="../../../../../../../../Middlewares/ST/STM32_Cellular/Utilities/Misc/Cmd/Inc"/>
+									<listOptionValue builtIn="false" value="../../../../../../../../Middlewares/ST/STM32_Cellular/Utilities/Misc/Cellular_Runtime/Inc"/>
+									<listOptionValue builtIn="false" value="../../../../../BootLoader_OSC/Linker_Common"/>
+									<listOptionValue builtIn="false" value="../../../../../../../../Drivers/CMSIS/Include"/>
+								</option>
+								<option id="gnu.c.compiler.option.preprocessor.def.symbols.1357593466" name="Defined symbols (-D)" superClass="gnu.c.compiler.option.preprocessor.def.symbols" useByScannerDiscovery="false" valueType="definedSymbols">
+									<listOptionValue builtIn="false" value="STM32L496xx"/>
+									<listOptionValue builtIn="false" value="USE_HAL_DRIVER"/>
+                  <!-- comment BOOTLOADER for L496 because doesn't fit in Flash memory
+									<listOptionValue builtIn="false" value="BOOTLOADER"/>
+                  -->
+									<listOptionValue builtIn="false" value="MBEDTLS_CONFIG_FILE=&lt;mbedtls_config.h&gt;"/>
+									<listOptionValue builtIn="false" value="ENABLE_IOT_INFO"/>
+									<listOptionValue builtIn="false" value="ENABLE_IOT_ERROR"/>
+									<listOptionValue builtIn="false" value="ENABLE_IOT_WARNING"/>
+									<listOptionValue builtIn="false" value="DONT_USE_UPLOADTOBLOB"/>
+									<listOptionValue builtIn="false" value="AZURE"/>
+									<listOptionValue builtIn="false" value="USE_MBED_TLS"/>
+									<listOptionValue builtIn="false" value="HSM_TYPE_X509"/>
+									<listOptionValue builtIn="false" value="HSM_TYPE_SAS_TOKEN"/>
+									<listOptionValue builtIn="false" value="USE_PROV_MODULE"/>
+									<listOptionValue builtIn="false" value="EINVAL=22"/>
+									<listOptionValue builtIn="false" value="ENOMEM=12"/>
+									<listOptionValue builtIn="false" value="STRINGS_C_SPRINTF_BUFFER_SIZE=512"/>
+									<listOptionValue builtIn="false" value="USE_C2C_RTOS"/>
+									<listOptionValue builtIn="false" value="HAS_RTOS"/>
+									<listOptionValue builtIn="false" value="MANUAL_SIM_SELECTION"/>
+									<listOptionValue builtIn="false" value="USE_MODEM_BG96"/>
+									<listOptionValue builtIn="false" value="USE_C2C"/>
+									<listOptionValue builtIn="false" value="PARTIAL_HEAP_SIZE=60000"/>
+								</option>
+								<option id="fr.ac6.managedbuild.gnu.c.compiler.option.misc.other.991374573" superClass="fr.ac6.managedbuild.gnu.c.compiler.option.misc.other" useByScannerDiscovery="false" value="-fmessage-length=0" valueType="string"/>
+								<inputType id="fr.ac6.managedbuild.tool.gnu.cross.c.compiler.input.c.2023693014" superClass="fr.ac6.managedbuild.tool.gnu.cross.c.compiler.input.c"/>
+								<inputType id="fr.ac6.managedbuild.tool.gnu.cross.c.compiler.input.s.1745927540" superClass="fr.ac6.managedbuild.tool.gnu.cross.c.compiler.input.s"/>
+							</tool>
+							<tool id="fr.ac6.managedbuild.tool.gnu.cross.cpp.compiler.1305441332" name="MCU G++ Compiler" superClass="fr.ac6.managedbuild.tool.gnu.cross.cpp.compiler">
+								<option defaultValue="gnu.cpp.optimization.level.none" id="fr.ac6.managedbuild.gnu.cpp.compiler.option.optimization.level.1432722891" name="Optimization Level" superClass="fr.ac6.managedbuild.gnu.cpp.compiler.option.optimization.level" useByScannerDiscovery="false" value="fr.ac6.managedbuild.gnu.cpp.optimization.level.size" valueType="enumerated"/>
+								<option id="gnu.cpp.compiler.option.debugging.level.2109369851" name="Debug Level" superClass="gnu.cpp.compiler.option.debugging.level" useByScannerDiscovery="false" value="gnu.cpp.compiler.debugging.level.max" valueType="enumerated"/>
+								<option id="gnu.cpp.compiler.option.include.paths.1985804292" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" useByScannerDiscovery="false" valueType="includePath">
+									<listOptionValue builtIn="false" value="../../../../../../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include"/>
+									<listOptionValue builtIn="false" value="../../../../../../../../Drivers/STM32L4xx_HAL_Driver/Inc"/>
+									<listOptionValue builtIn="false" value="../../../../../../../../Drivers/BSP/STM32L496G-Discovery"/>
+									<listOptionValue builtIn="false" value="../../../Inc"/>
+									<listOptionValue builtIn="false" value="../../../../../../../../Middlewares/ST/STM32_Connect_Library/Includes"/>
+									<listOptionValue builtIn="false" value="../../../../../../../../Middlewares/ST/STM32_Secure_Engine/Core"/>
+									<listOptionValue builtIn="false" value="../../../../../BootLoader_OSC/2_Images_SECoreBin/Inc"/>
+									<listOptionValue builtIn="false" value="../../../../../BootLoader_OSC/2_Images_SBSFU/SBSFU/App"/>
+									<listOptionValue builtIn="false" value="../../../../../BootLoader_OSC/Linker_Common/SW4STM32"/>
+									<listOptionValue builtIn="false" value="../../../../../../../Misc_Utils/Inc"/>
+									<listOptionValue builtIn="false" value="../../../../../../../../Utilities/Time"/>
+									<listOptionValue builtIn="false" value="../../../../../../../../Utilities/CLD_utils/http_lib"/>
+									<listOptionValue builtIn="false" value="../../../../../../../../Middlewares/Third_Party/azure-iot-sdk-c/umqtt/inc"/>
+									<listOptionValue builtIn="false" value="../../../../../../../../Middlewares/Third_Party/azure-iot-sdk-c/iothub_client/inc"/>
+									<listOptionValue builtIn="false" value="../../../../../../../../Middlewares/Third_Party/azure-iot-sdk-c/iothub_client/samples/STM32Cube_sample"/>
+									<listOptionValue builtIn="false" value="../../../../../../../../Middlewares/Third_Party/azure-iot-sdk-c/provisioning_client/adapters"/>
+									<listOptionValue builtIn="false" value="../../../../../../../../Middlewares/Third_Party/azure-iot-sdk-c/provisioning_client/inc"/>
+									<listOptionValue builtIn="false" value="../../../../../../../../Middlewares/Third_Party/azure-iot-sdk-c/provisioning_client/deps/RIoT/Emulator/RIoT"/>
+									<listOptionValue builtIn="false" value="../../../../../../../../Middlewares/Third_Party/azure-iot-sdk-c/provisioning_client/deps/RIoT/Emulator/DICE"/>
+									<listOptionValue builtIn="false" value="../../../../../../../../Middlewares/Third_Party/azure-iot-sdk-c/provisioning_client/deps/RIoT/Emulator/RIoT/RIoTCrypt/include"/>
+									<listOptionValue builtIn="false" value="../../../../../../../../Middlewares/Third_Party/azure-iot-sdk-c/c-utility/inc"/>
+									<listOptionValue builtIn="false" value="../../../../../../../../Middlewares/Third_Party/azure-iot-sdk-c/c-utility/pal/generic"/>
+									<listOptionValue builtIn="false" value="../../../../../../../../Middlewares/Third_Party/azure-iot-sdk-c/serializer/inc"/>
+									<listOptionValue builtIn="false" value="../../../../../../../../Middlewares/Third_Party/azure-iot-sdk-c/deps/parson"/>
+									<listOptionValue builtIn="false" value="../../../../../../../../Middlewares/Third_Party/mbedTLS/include"/>
+									<listOptionValue builtIn="false" value="../../../../../../../../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F"/>
+									<listOptionValue builtIn="false" value="../../../../../../../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS"/>
+									<listOptionValue builtIn="false" value="../../../../../../../../Middlewares/Third_Party/FreeRTOS/Source/include"/>
+									<listOptionValue builtIn="false" value="../../../../../../../../Middlewares/Third_Party/FreeRTOS/Source"/>
+									<listOptionValue builtIn="false" value="../../../../../../../../Middlewares/ST/STM32_Cellular/Core/Cellular_Service/AT_Service/Core/Inc"/>
+									<listOptionValue builtIn="false" value="../../../../../../../../Drivers/BSP/Modems/UG96_STMOD+/AT_modem_ug96/Inc"/>
+									<listOptionValue builtIn="false" value="../../../../../../../../Drivers/BSP/Modems/BG96_STMOD+/AT_modem_bg96/Inc"/>
+									<listOptionValue builtIn="false" value="../../../../../../../../Middlewares/ST/STM32_Cellular/Core/Cellular_Service/Radio_Service/Cellular/Inc"/>
+									<listOptionValue builtIn="false" value="../../../../../../../../Middlewares/ST/STM32_Cellular/Core/Cellular_Api/Com/Inc"/>
+									<listOptionValue builtIn="false" value="../../../../../../../../Middlewares/ST/STM32_Cellular/Core/Cellular_Api/Data_Cache/Inc"/>
+									<listOptionValue builtIn="false" value="../../../../../../../../Middlewares/ST/STM32_Cellular/Interface/IPC/Inc"/>
+									<listOptionValue builtIn="false" value="../../../../../../../../Middlewares/ST/STM32_Cellular/Core/Cellular_Api/Nifman/Inc"/>
+									<listOptionValue builtIn="false" value="../../../../../../../../Middlewares/ST/STM32_Cellular/Porting/LwIP_Porting/PPPosif/Inc"/>
+									<listOptionValue builtIn="false" value="../../../../../../../../Middlewares/ST/STM32_Cellular/Core/Cellular_Api/Radio_Management/Inc"/>
+									<listOptionValue builtIn="false" value="../../../../../../../../Middlewares/ST/STM32_Cellular/Utilities/Misc/Error_Handler/Inc"/>
+									<listOptionValue builtIn="false" value="../../../../../../../../Middlewares/ST/STM32_Cellular/Utilities/Misc/Trace_Interface/Inc"/>
+									<listOptionValue builtIn="false" value="../../../../../../../../Middlewares/ST/STM32_Cellular/Utilities/Misc/Stack_Analysis/Inc"/>
+									<listOptionValue builtIn="false" value="../../../../../../../../Middlewares/ST/STM32_Cellular/Core/Cellular_Api/Cellular_Init/Inc"/>
+									<listOptionValue builtIn="false" value="../../../../../../../../Middlewares/ST/STM32_Cellular/Utilities/Misc/Cmd/Inc"/>
+									<listOptionValue builtIn="false" value="../../../../../../../../Middlewares/ST/STM32_Cellular/Utilities/Misc/Cellular_Runtime/Inc"/>
+									<listOptionValue builtIn="false" value="../../../../../BootLoader_OSC/Linker_Common"/>
+									<listOptionValue builtIn="false" value="../../../../../../../../Drivers/CMSIS/Include"/>
+								</option>
+								<option id="gnu.cpp.compiler.option.preprocessor.def.51547546" name="Defined symbols (-D)" superClass="gnu.cpp.compiler.option.preprocessor.def" useByScannerDiscovery="false" valueType="definedSymbols">
+									<listOptionValue builtIn="false" value="STM32L496xx"/>
+									<listOptionValue builtIn="false" value="USE_HAL_DRIVER"/>
+                  <!--
+									<listOptionValue builtIn="false" value="BOOTLOADER"/>
+                  -->
+									<listOptionValue builtIn="false" value="MBEDTLS_CONFIG_FILE=&lt;mbedtls_config.h&gt;"/>
+									<listOptionValue builtIn="false" value="ENABLE_IOT_INFO"/>
+									<listOptionValue builtIn="false" value="ENABLE_IOT_ERROR"/>
+									<listOptionValue builtIn="false" value="ENABLE_IOT_WARNING"/>
+									<listOptionValue builtIn="false" value="DONT_USE_UPLOADTOBLOB"/>
+									<listOptionValue builtIn="false" value="AZURE"/>
+									<listOptionValue builtIn="false" value="USE_MBED_TLS"/>
+									<listOptionValue builtIn="false" value="HSM_TYPE_X509"/>
+									<listOptionValue builtIn="false" value="HSM_TYPE_SAS_TOKEN"/>
+									<listOptionValue builtIn="false" value="USE_PROV_MODULE"/>
+									<listOptionValue builtIn="false" value="EINVAL=22"/>
+									<listOptionValue builtIn="false" value="ENOMEM=12"/>
+									<listOptionValue builtIn="false" value="STRINGS_C_SPRINTF_BUFFER_SIZE=512"/>
+									<listOptionValue builtIn="false" value="USE_C2C_RTOS"/>
+									<listOptionValue builtIn="false" value="HAS_RTOS"/>
+									<listOptionValue builtIn="false" value="MANUAL_SIM_SELECTION"/>
+									<listOptionValue builtIn="false" value="USE_MODEM_BG96"/>
+									<listOptionValue builtIn="false" value="USE_C2C"/>
+									<listOptionValue builtIn="false" value="PARTIAL_HEAP_SIZE=60000"/>
+								</option>
+								<option id="fr.ac6.managedbuild.gnu.cpp.compiler.option.misc.other.385713984" name="Other flags" superClass="fr.ac6.managedbuild.gnu.cpp.compiler.option.misc.other" useByScannerDiscovery="false" value="-fmessage-length=0" valueType="string"/>
+								<inputType id="fr.ac6.managedbuild.tool.gnu.cross.cpp.compiler.input.cpp.783423786" superClass="fr.ac6.managedbuild.tool.gnu.cross.cpp.compiler.input.cpp"/>
+								<inputType id="fr.ac6.managedbuild.tool.gnu.cross.cpp.compiler.input.s.49945495" superClass="fr.ac6.managedbuild.tool.gnu.cross.cpp.compiler.input.s"/>
+							</tool>
+<!-- SBSFU linker options commented (not enough Flash memory on L496)
+							<tool command="gcc -z max-page-size=0x200" id="fr.ac6.managedbuild.tool.gnu.cross.c.linker.1894300671" name="MCU GCC Linker" superClass="fr.ac6.managedbuild.tool.gnu.cross.c.linker">
+								<option id="fr.ac6.managedbuild.tool.gnu.cross.c.linker.script.1912627335" name="Linker Script (-T)" superClass="fr.ac6.managedbuild.tool.gnu.cross.c.linker.script" value="../STM32L496AGIx_FLASH.ld" valueType="string"/>
+								<option id="gnu.c.link.option.libs.861568156" name="Libraries (-l)" superClass="gnu.c.link.option.libs" valueType="libs">
+									<listOptionValue builtIn="false" value=":se_interface_app.o"/>
+								</option>
+								<option id="gnu.c.link.option.paths.1392724471" name="Library search path (-L)" superClass="gnu.c.link.option.paths" valueType="libPaths">
+									<listOptionValue builtIn="false" value="../../../../../BootLoader_OSC/2_Images_SBSFU/SW4STM32/STM32L496G-Discovery_2_Images_SBSFU/Debug"/>
+								</option>
+								<option id="gnu.c.link.option.ldflags.1586890702" name="Linker flags" superClass="gnu.c.link.option.ldflags" value="-specs=nosys.specs -specs=nano.specs -u _printf_float" valueType="string"/>
+								<option id="gnu.c.link.option.other.1357171454" name="Other options (-Xlinker [option])" superClass="gnu.c.link.option.other" useByScannerDiscovery="false" valueType="stringList">
+									<listOptionValue builtIn="false" value="-L../../../../../BootLoader_OSC/Linker_Common/SW4STM32"/>
+								</option>
+								<inputType id="cdt.managedbuild.tool.gnu.c.linker.input.1411155281" superClass="cdt.managedbuild.tool.gnu.c.linker.input">
+									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
+									<additionalInput kind="additionalinput" paths="$(LIBS)"/>
+								</inputType>
+							</tool>
+-->
+<!-- below is linker configuration without SBSFU -->
+							<tool id="fr.ac6.managedbuild.tool.gnu.cross.c.linker.1894300671" name="MCU GCC Linker" superClass="fr.ac6.managedbuild.tool.gnu.cross.c.linker">
+								<option id="fr.ac6.managedbuild.tool.gnu.cross.c.linker.script.1912627335" name="Linker Script (-T)" superClass="fr.ac6.managedbuild.tool.gnu.cross.c.linker.script" value="../STM32L496AGIx_FLASH_NOSBSFU.ld" valueType="string"/>
+								<option id="gnu.c.link.option.libs.861568156" name="Libraries (-l)" superClass="gnu.c.link.option.libs" valueType="libs">
+								</option>
+								<option id="gnu.c.link.option.paths.1392724471" name="Library search path (-L)" superClass="gnu.c.link.option.paths" valueType="libPaths">
+								</option>
+								<option id="gnu.c.link.option.ldflags.1586890702" name="Linker flags" superClass="gnu.c.link.option.ldflags" value="-specs=nosys.specs -specs=nano.specs -u _printf_float" valueType="string"/>
+								<inputType id="cdt.managedbuild.tool.gnu.c.linker.input.1411155281" superClass="cdt.managedbuild.tool.gnu.c.linker.input">
+									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
+									<additionalInput kind="additionalinput" paths="$(LIBS)"/>
+								</inputType>
+							</tool>
+							<tool id="fr.ac6.managedbuild.tool.gnu.cross.cpp.linker.1708794870" name="MCU G++ Linker" superClass="fr.ac6.managedbuild.tool.gnu.cross.cpp.linker">
+								<option id="fr.ac6.managedbuild.tool.gnu.cross.cpp.linker.script.980975493" name="Linker Script (-T)" superClass="fr.ac6.managedbuild.tool.gnu.cross.cpp.linker.script" value="../STM32L496AGIx_FLASH.ld" valueType="string"/>
+								<option id="gnu.cpp.link.option.libs.63927431" name="Libraries (-l)" superClass="gnu.cpp.link.option.libs" valueType="libs">
+									<listOptionValue builtIn="false" value=":se_interface_appli.o"/>
+								</option>
+								<option id="gnu.cpp.link.option.paths.1346603671" name="Library search path (-L)" superClass="gnu.cpp.link.option.paths" valueType="libPaths">
+									<listOptionValue builtIn="false" value="../../../../../BootLoader_OSC/2_Images_SBSFU/SW4STM32/STM32L496G-Discovery_2_Images_SBSFU/Debug"/>
+								</option>
+								<option id="gnu.cpp.link.option.flags.951089602" name="Linker flags" superClass="gnu.cpp.link.option.flags" value="-specs=nosys.specs -specs=nano.specs -u _printf_float" valueType="string"/>
+								<inputType id="cdt.managedbuild.tool.gnu.cpp.linker.input.1017469504" superClass="cdt.managedbuild.tool.gnu.cpp.linker.input">
+									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
+									<additionalInput kind="additionalinput" paths="$(LIBS)"/>
+								</inputType>
+							</tool>
+							<tool id="fr.ac6.managedbuild.tool.gnu.archiver.202097952" name="MCU GCC Archiver" superClass="fr.ac6.managedbuild.tool.gnu.archiver"/>
+							<tool id="fr.ac6.managedbuild.tool.gnu.cross.assembler.1881025008" name="MCU GCC Assembler" superClass="fr.ac6.managedbuild.tool.gnu.cross.assembler">
+								<option id="gnu.both.asm.option.include.paths.800312894" name="Include paths (-I)" superClass="gnu.both.asm.option.include.paths" valueType="includePath">
+									<listOptionValue builtIn="false" value="../../../Inc"/>
+								</option>
+								<inputType id="cdt.managedbuild.tool.gnu.assembler.input.973687364" superClass="cdt.managedbuild.tool.gnu.assembler.input"/>
+								<inputType id="fr.ac6.managedbuild.tool.gnu.cross.assembler.input.897136531" superClass="fr.ac6.managedbuild.tool.gnu.cross.assembler.input"/>
+							</tool>
+						</toolChain>
+					</folderInfo>
+					<sourceEntries>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+					</sourceEntries>
+				</configuration>
+			</storageModule>
+			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+		</cconfiguration>
+	</storageModule>
+	<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+		<project id="STM32L496G-Discovery_Azure.fr.ac6.managedbuild.target.gnu.cross.exe.1472072245" name="Executable" projectType="fr.ac6.managedbuild.target.gnu.cross.exe"/>
+	</storageModule>
+	<storageModule moduleId="scannerConfiguration">
+		<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		<scannerConfigBuildInfo instanceId="fr.ac6.managedbuild.config.gnu.cross.exe.debug.1641714255;fr.ac6.managedbuild.config.gnu.cross.exe.debug.1641714255.;fr.ac6.managedbuild.tool.gnu.cross.c.compiler.2112236808;fr.ac6.managedbuild.tool.gnu.cross.c.compiler.input.c.2023693014">
+			<autodiscovery enabled="false" problemReportingEnabled="true" selectedProfileId=""/>
+		</scannerConfigBuildInfo>
+	</storageModule>
+	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
+	<storageModule moduleId="refreshScope" versionNumber="2">
+		<configuration artifactName="${ProjName}" configurationName="Debug">
+			<resource resourceType="PROJECT" workspacePath="STM32L496G-Discovery_Azure"/>
+		</configuration>
+	</storageModule>
+	<storageModule moduleId="org.eclipse.cdt.make.core.buildtargets"/>
+</cproject>

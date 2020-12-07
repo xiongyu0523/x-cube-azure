@@ -1,0 +1,1448 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Release Notes for X-CUBE-AZURE Package</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <link rel="stylesheet" href="_htmresc/mini-st.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+  <link rel="icon" type="image/x-icon" href="_htmresc/favicon.png" />
+</head>
+<body>
+<div class="row">
+<div class="col-sm-12 col-lg-4">
+<div class="card fluid">
+<div class="sectione dark">
+<center>
+<h1 id="release-notes-for-x-cube-azure"><small>Release Notes for</small> <mark>X-CUBE-AZURE</mark></h1>
+<p>Copyright © 2018 STMicroelectronics<br />
+Microcontrollers Division - Application Team</p>
+<a href="https://www.st.com" class="logo"><img src="_htmresc/st_logo.png" alt="ST logo" /></a>
+</center>
+</div>
+</div>
+<h1 id="license">License</h1>
+<p>Licensed under ST license SLA0048 (the “License”). You may not use this package except in compliance with the License.</p>
+<p>You may obtain a copy of the License at: <a href="http://www.st.com/SLA0048">SLA0048 Software license agreement</a>.</p>
+<h1 id="purpose">Purpose</h1>
+<p>The <mark>X-CUBE-AZURE</mark> (STM32 Azure IoT software expansion for STM32Cube) provides ready-to-run firmware examples to support quick evaluation and development of Azure IoT Cloud applications on B-L475E-IOT01A, 32F413HDISCOVERY, 32F769IDISCOVERY and 32L496GDISCOVERY with cellular add-on board.</p>
+<ul>
+<li>Three IDE are supported:
+<ul>
+<li>IAR EWARM</li>
+<li>Keil MDK-ARM</li>
+<li>System Workbench for STM32</li>
+</ul></li>
+<li><p>It contains BSP compatible sensor drivers for B-L475E-IOT01A.</p></li>
+<li><p>It connects to Azure IoT hubs through an MQTT over TLS connection.</p></li>
+<li>X-CUBE-AZURE runs on four platforms:
+<ul>
+<li>B-L475E-IOT01A and 32F413HDISCOVERY support Wi-Fi™ connectivity with an on-board Inventek ISM43362 module.</li>
+<li>32F769IDISCOVERY provides a native Ethernet interface.</li>
+<li>P-L496G-CELL02, packed with 32L496GDISCOVERY and LTE Quectel BG96 cellular modem daughter board, supports cellular connectivity.</li>
+</ul></li>
+<li>List of references to user documents:
+<ul>
+<li><a href="https://www.st.com/content/st_com/en/search.html#q=UM2242%20-t=resources-page=1">UM2242</a> - Getting started with Microsoft® Azure IoT cloud software expansion for STM32Cube</li>
+<li><a href="https://www.st.com/content/st_com/en/search.html#q=UM2426%20-t=resources-page=1">UM2426</a> - Getting started with the <mark>X-CUBE-CELLULAR</mark> cellular connectivity Expansion Package for STM32Cube</li>
+<li><a href="https://www.st.com/content/st_com/en/search.html#q=UM2262%20-t=resources-page=1">UM2262</a> - Getting started with the <mark>X-CUBE-SBSFU</mark> STM32Cube Expansion Package</li>
+</ul></li>
+</ul>
+</div>
+<div class="col-sm-12 col-lg-8">
+<h1 id="update-history">Update History</h1>
+<div class="collapse">
+<input type="checkbox" id="collapse-section5" checked aria-hidden="true"> <label for="collapse-section5" aria-hidden="true">V1.2.1 / 06 November 2019</label>
+<div>
+<h2 id="main-changes">Main Changes</h2>
+<h3 id="prerequisite">Prerequisite</h3>
+<ul>
+<li>Please install <a href="https://www.st.com/en/development-tools/stm32cubeprog.html">STM32CubeProgrammer</a> from Version 2.0.0 to the proposed default location.</li>
+</ul>
+<h3 id="bug-fixes">Bug fixes</h3>
+<ul>
+<li>32L496GDISCOVERY: get C2C credentials from flash memory and fix APN configuration transferred to Cellular.</li>
+<li>correct gyroscope sensor values for B-L475E-IOT01.</li>
+<li>correct error when no semi-colon at end of configuration string in case of DPS connection.</li>
+<li>ST Dashboard for B-L475E-IOT01: update configuration string in readme.txt (IdScope change).</li>
+</ul>
+<h2 id="contents">Contents</h2>
+<p><small>The components flagged by “<span class="icon-info"></span>” have changed since the previous release. “<span class="icon-cart"></span>” are new.</small></p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Component</th>
+<th style="text-align: left;">Version</th>
+<th style="text-align: left;">License</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">CMSIS</td>
+<td style="text-align: left;"><a href="Drivers/CMSIS/docs/General/html/cm_revisionHistory.html">V5.4.0</a></td>
+<td style="text-align: left;"><a href="Drivers/CMSIS/LICENSE.txt">Apache 2.0</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">CMSIS STM32F4xx</td>
+<td style="text-align: left;"><a href="Drivers/CMSIS/Device/ST/STM32F4xx/Release_Notes.html">V2.6.3</a></td>
+<td style="text-align: left;"><a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">CMSIS STM32F7xx</td>
+<td style="text-align: left;"><a href="Drivers/CMSIS/Device/ST/STM32F7xx/Release_Notes.html">V1.2.4</a></td>
+<td style="text-align: left;"><a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">CMSIS STM32L4xx</td>
+<td style="text-align: left;"><a href="Drivers/CMSIS/Device/ST/STM32L4xx/Release_Notes.html">V1.5.1</a></td>
+<td style="text-align: left;"><a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32F4xx_HAL_Driver HAL</td>
+<td style="text-align: left;"><a href="Drivers/STM32F4xx_HAL_Driver/Release_Notes.html">V1.7.6</a></td>
+<td style="text-align: left;"><a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32F7xx_HAL_Driver HAL</td>
+<td style="text-align: left;"><a href="Drivers/STM32F7xx_HAL_Driver/Release_Notes.html">V1.2.7</a></td>
+<td style="text-align: left;"><a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32L4xx_HAL_Driver HAL</td>
+<td style="text-align: left;"><a href="Drivers/STM32L4xx_HAL_Driver/Release_Notes.html">V1.10.0</a></td>
+<td style="text-align: left;"><a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a></td>
+</tr>
+</tbody>
+</table>
+<p>Drivers</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">BSP Component</th>
+<th style="text-align: left;">Version</th>
+<th style="text-align: left;">License</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">BSP B-L475E-IOT01</td>
+<td style="text-align: left;"><a href="Drivers/BSP/B-L475E-IOT01/Release_Notes.html">V1.1.4</a></td>
+<td style="text-align: left;"><a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">BSP STM32F413H-Discovery</td>
+<td style="text-align: left;"><a href="Drivers/BSP/STM32F413H-Discovery/Release_Notes.html">V1.0.1</a></td>
+<td style="text-align: left;"><a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">BSP STM32F769I-Discovery</td>
+<td style="text-align: left;"><a href="Drivers/BSP/STM32F769I-Discovery/Release_Notes.html">V2.0.1</a></td>
+<td style="text-align: left;"><a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">BSP STM32L496G-Discovery</td>
+<td style="text-align: left;"><a href="Drivers/BSP/STM32L496G-Discovery/Release_Notes.html">V1.1.2</a></td>
+<td style="text-align: left;"><a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">BSP adv7533</td>
+<td style="text-align: left;"><a href="Drivers/BSP/Components/adv7533/Release_Notes.html">V1.0.2</a></td>
+<td style="text-align: left;"><a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">BSP Common</td>
+<td style="text-align: left;"><a href="Drivers/BSP/Components/Common/Release_Notes.html">V5.1.2</a></td>
+<td style="text-align: left;"><a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">BSP mfxstm32l152</td>
+<td style="text-align: left;"><a href="Drivers/BSP/Components/mfxstm32l152/Release_Notes.html">V2.0.1</a></td>
+<td style="text-align: left;"><a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">BSP otm8009a</td>
+<td style="text-align: left;"><a href="Drivers/BSP/Components/otm8009a/Release_Notes.html">V1.0.3</a></td>
+<td style="text-align: left;"><a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">BSP st7789h2</td>
+<td style="text-align: left;"><a href="Drivers/BSP/Components/st7789h2/Release_Notes.html">V1.1.2</a></td>
+<td style="text-align: left;"><a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">BSPv2 B-L475E-IOT01</td>
+<td style="text-align: left;"><a href="Drivers/BSPv2/B-L475E-IOT01/Release_Notes.html">V2.0.0</a></td>
+<td style="text-align: left;"><a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">BSPv2 STM32F413H-Discovery</td>
+<td style="text-align: left;"><a href="Drivers/BSPv2/STM32F413H-Discovery/Release_Notes.html">V2.0.0</a></td>
+<td style="text-align: left;"><a href="https://www.st.com/resource/en/license_agreement/dm00216740.pdf">SLA0044</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">BSPv2 Common</td>
+<td style="text-align: left;"><a href="Drivers/BSPv2/Components/Common/Release_Notes.html">V6.0.0</a></td>
+<td style="text-align: left;"><a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">BSPv2 es_wifi</td>
+<td style="text-align: left;"><a href="Drivers/BSPv2/Components/es_wifi/Release_Notes.html">V1.4.0</a></td>
+<td style="text-align: left;"><a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">BSPv2 hts221</td>
+<td style="text-align: left;"><a href="Drivers/BSPv2/Components/hts221/Release_Notes.html">V5.1.0</a></td>
+<td style="text-align: left;"><a href="https://www.st.com/resource/en/license_agreement/dm00216740.pdf">SLA0044</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">BSPv2 lis3mdl</td>
+<td style="text-align: left;"><a href="Drivers/BSPv2/Components/lis3mdl/Release_Notes.html">V5.1.1</a></td>
+<td style="text-align: left;"><a href="https://www.st.com/resource/en/license_agreement/dm00216740.pdf">SLA0044</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">BSPv2 lps22hb</td>
+<td style="text-align: left;"><a href="Drivers/BSPv2/Components/lps22hb/Release_Notes.html">V5.1.0</a></td>
+<td style="text-align: left;"><a href="https://www.st.com/resource/en/license_agreement/dm00216740.pdf">SLA0044</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">BSPv2 lsm6dsl</td>
+<td style="text-align: left;"><a href="Drivers/BSPv2/Components/lsm6dsl/Release_Notes.html">V5.1.0</a></td>
+<td style="text-align: left;"><a href="https://www.st.com/resource/en/license_agreement/dm00216740.pdf">SLA0044</a></td>
+</tr>
+</tbody>
+</table>
+<p>Middleware</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Component</th>
+<th style="text-align: left;">Version</th>
+<th style="text-align: left;">ST modified</th>
+<th style="text-align: left;">License</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Microsoft Azure SDK for C</td>
+<td style="text-align: left;"><a href="Middlewares/Third_Party/azure-iot-sdk-c/readme.md">1.3.1</a></td>
+<td style="text-align: left;"><a href="Middlewares/Third_Party/azure-iot-sdk-c/st_readme.txt">2019-06-24</a></td>
+<td style="text-align: left;"><a href="https://opensource.org/licenses/MIT">MIT</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">FreeRTOS</td>
+<td style="text-align: left;"><a href="Middlewares/Third_Party/FreeRTOS/Source/readme.txt">V10.0.1 2018-08-13</a></td>
+<td style="text-align: left;"><a href="Middlewares/Third_Party/FreeRTOS/Source/st_readme.txt">2018-08-13</a></td>
+<td style="text-align: left;"><a href="Middlewares/Third_Party/FreeRTOS/License/license.txt">MIT</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">LwIP</td>
+<td style="text-align: left;"><a href="Middlewares/Third_Party/LwIP/CHANGELOG">V2.1.2_20190315</a></td>
+<td style="text-align: left;"><a href="Middlewares/Third_Party/LwIP/st_readme.txt">2019-03-15</a></td>
+<td style="text-align: left;"><a href="Middlewares/Third_Party/LwIP/COPYING">BSD</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">mbedTLS</td>
+<td style="text-align: left;"><a href="Middlewares/Third_Party/mbedTLS/ChangeLog">V2.14.1_20190329</a></td>
+<td style="text-align: left;"><a href="Middlewares/Third_Party/mbedTLS/st_readme.txt">2018-12-21</a></td>
+<td style="text-align: left;"><a href="https://opensource.org/licenses/Apache-2.0">Apache-2.0</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32_Cellular</td>
+<td style="text-align: left;">[V3.6.1]</td>
+<td style="text-align: left;">[2019-04-12]</td>
+<td style="text-align: left;"><a href="https://www.st.com/resource/en/license_agreement/dm00216740.pdf">SLA0044</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32_Connect_Library</td>
+<td style="text-align: left;"><a href="Middlewares/ST/STM32_Connect_Library/Release_Notes.html">V1.0.3.1</a> <span class="icon-info"></span></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><a href="https://www.st.com/resource/en/license_agreement/dm00216740.pdf">SLA0044</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32_Secure_Engine</td>
+<td style="text-align: left;"><a href="Middlewares/ST/STM32_Secure_Engine/Release_Notes.html">V1.2.0</a></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><a href="https://www.st.com/resource/en/license_agreement/dm00216740.pdf">SLA0044</a></td>
+</tr>
+</tbody>
+</table>
+<p>Applications</p>
+<ul>
+<li>Microsoft Azure IoT Cube sample application.</li>
+</ul>
+<h2 id="known-limitations">Known Limitations</h2>
+<ul>
+<li>Azure SDK: Disabled some compilation warnings in the project files.
+<ul>
+<li>IAR</li>
+</ul>
+<pre><code>- Do not require C functions prototypes
+- Pa084:  pointless integer comparison, the result is always %s
+- Pe177:  %n was declared but never referenced
+- Pe181: argument is incompatible with corresponding format string conversion</code></pre>
+<ul>
+<li>Keil</li>
+</ul>
+<pre><code>--gnu
+--diag_suppress=
+  177    &lt;entity&gt; was declared but never referenced
+  1295   Deprecated declaration &lt;entity&gt; - give arg types
+
+  Note: STRINGS_C_SPRINTF_BUFFER_SIZE is defined in the project files so that the Azure printf wrapper does not silently run out of memory.</code></pre></li>
+<li>Application using the Azure SDK serializer: Disabled some compilation warnings in the source.
+<ul>
+<li>IAR</li>
+</ul>
+<pre><code>#pragma diag_suppress=Pe177</code></pre>
+<ul>
+<li>Keil</li>
+</ul>
+<pre><code>#pragma diag_suppress 177</code></pre>
+<ul>
+<li>SystemWorkbench</li>
+</ul>
+<pre><code>#pragma GCC diagnostic ignored &quot;-Wunused-variable&quot;
+#pragma GCC diagnostic ignored &quot;-Wunused-function&quot;</code></pre></li>
+<li><p>The SBSFU secure boot feature is not enabled in SW4STM32 projects for B-L475E-IOT01A and 32L496GDISCOVERY because the code does not fit in Flash memory. This results in a different memory map.</p></li>
+<li><p>The SBSFU secure boot feature is not enabled in Keil MDK-ARM project for 32L496GDISCOVERY because the code does not fit in Flash memory.</p></li>
+<li><p>If the Firmware Update process is interrupted, the board must be re-flashed.</p></li>
+<li>Occasional temporary connection failures on 32F769IDISCOVERY:
+<ul>
+<li>The device may not (re)connect to the IoT hub right away. If a trial fails, a few error log lines are displayed on the console. The device reconnects after expiration of the MQTT keepalive timeout.</li>
+</ul></li>
+<li>System Workbench for STM32.
+<ul>
+<li>B-L475E-IOT01A board rev B and rev C requires to use System Workbench for STM32 with version greater or equal to 2.1. A debug option must be changed:
+<ul>
+<li>Right click on the project, select “Debus as…”, “Debug Configuration…”, the “B-L475E-IOT01A.elf” target, then the “Debugger” tab</li>
+<li>If the “Reset Mode” option is not visible, click on the “Show generator options…” button</li>
+<li>The “Reset Mode” option must be set to “Software system reset”</li>
+</ul></li>
+<li>The debugger starts the execution from the application main(), and not from the BootLoader main(). A workaround is to perform a hard-reset on the board to force a full reboot.</li>
+</ul></li>
+<li>Warnings when building SBSFU
+<ul>
+<li>By default we deactivate SBSFU security to enable debug which trigs warnings.</li>
+</ul></li>
+</ul>
+<h2 id="development-toolchains-and-compilers">Development Toolchains and Compilers</h2>
+<ul>
+<li>IAR Embedded Workbench for ARM (EWARM). Version 8.32.3</li>
+<li>Keil Microcontroller Development Kit (MDK-ARM). Version 5.27</li>
+<li>System Workbench for STM32 (SW4STM32). Version 2.9</li>
+</ul>
+<h2 id="supported-devices-and-boards">Supported Devices and Boards</h2>
+<ul>
+<li>B-L475E-IOT01A board (MB1297 rev D).</li>
+<li>B-L475E-IOT01A board (MB1297 rev B and C) with limitations for System Workbench for STM32 tools.</li>
+<li>32F413HDISCOVERY board (MB1274 rev B).</li>
+<li>32F769IDISCOVERY board (MB1225 rev B).</li>
+<li>P-L496G-CELL02 board package including the 32L496G-Discovery board (MB1261 rev B) and the Cellular Add-on board based on BG96 4G Modem (MB1329 rev B)</li>
+</ul>
+<h2 id="dependencies">Dependencies</h2>
+<p>This release is pre-integrated with minor adaptations, and compatible with the following STM32Cube expansion packages:</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Package</th>
+<th style="text-align: left;">Version</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://www.st.com/en/embedded-software/x-cube-cellular.html">X-CUBE-CELLULAR</a></td>
+<td style="text-align: left;">V3.6</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://www.st.com/en/embedded-software/x-cube-sbsfu.html">X-CUBE-SBSFU</a></td>
+<td style="text-align: left;">V1.2</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="collapse">
+<input type="checkbox" id="collapse-section4" aria-hidden="true"> <label for="collapse-section4" aria-hidden="true">V1.2.0 / 17 July 2019</label>
+<div>
+<h2 id="main-changes-1">Main Changes</h2>
+<h3 id="prerequisite-1">Prerequisite</h3>
+<ul>
+<li>Please install <a href="https://www.st.com/en/development-tools/stm32cubeprog.html">STM32CubeProgrammer</a> from Version 2.0.0 to the proposed default location.</li>
+</ul>
+<h3 id="new-features">New features</h3>
+<ul>
+<li>Update Azure IoT C SDK middleware to version 1.3.1 (11 April 2019)</li>
+<li>Cellular connection on 32L496GDISCOVERY with the board extension based on the BG96 Quectel modem component and the cellular stack of the <mark>X-CUBE-CELLULAR</mark> package. Note that despite the P-L496G-CELL01 (Quectel UG96 3G modem) board is not specifically supported by the present expansion package, it can be enabled by the user. Please refer to the documentation of <mark>X-CUBE-CELLULAR</mark>.</li>
+<li>STM32_Connect_Library providing a flexible network abstraction.</li>
+<li>Support of Secure Firmware Update, based on a bootloader derived from the <mark>X-CUBE-SBSFU</mark> package:
+<ul>
+<li>Generation of encrypted firmware update image.</li>
+<li>Ensure authenticity and integrity of firmware update process.</li>
+<li>Dual image support enable rollback and version check mechanism.</li>
+<li>Asymmetric and symmetric cryptographic schemes supported.</li>
+<li>IDE projects (SBSFU, SE_CoreBIN) to configure the bootloader.</li>
+<li>Advanced elf generation to create a single executable image with bootloader and cloud application.</li>
+</ul></li>
+<li>Azure X509 device authentication.</li>
+<li>Azure device property to start a remote firmware update.</li>
+<li>Azure Device Provisioning Service (DPS).</li>
+<li>Azure IOT Central support.</li>
+<li>Support of the STMicroelectronics web dashboard for Azure.</li>
+<li>Update to the latest versions of HAL, BSP, FreeRTOS…</li>
+</ul>
+<h3 id="bug-fixes-1">Bug fixes</h3>
+<ul>
+<li>eS-WiFi driver (B-L475E-IOT01A, 32F413HDISCOVERY): Driver improvements.</li>
+<li>eS-WiFi RTOS support.</li>
+<li>Configuration of the RTC frequency scalers on 32F413HDISCOVERY and 32F769IDISCOVERY.</li>
+<li>Memory corruption of Ethernet buffers on 32F769IDISCOVERY.</li>
+<li>Workaround (retry) for temporary DNS resolution failures of the HTTP time server.</li>
+</ul>
+<h2 id="contents-1">Contents</h2>
+<p><small>The components flagged by “<span class="icon-info"></span>” have changed since the previous release. “<span class="icon-cart"></span>” are new.</small></p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Component</th>
+<th style="text-align: left;">Version</th>
+<th style="text-align: left;">License</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">CMSIS</td>
+<td style="text-align: left;"><a href="Drivers/CMSIS/docs/General/html/cm_revisionHistory.html">V5.4.0</a> <span class="icon-info"></span></td>
+<td style="text-align: left;"><a href="Drivers/CMSIS/LICENSE.txt">Apache 2.0</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">CMSIS STM32F4xx</td>
+<td style="text-align: left;"><a href="Drivers/CMSIS/Device/ST/STM32F4xx/Release_Notes.html">V2.6.3</a> <span class="icon-info"></span></td>
+<td style="text-align: left;"><a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">CMSIS STM32F7xx</td>
+<td style="text-align: left;"><a href="Drivers/CMSIS/Device/ST/STM32F7xx/Release_Notes.html">V1.2.4</a> <span class="icon-info"></span></td>
+<td style="text-align: left;"><a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">CMSIS STM32L4xx</td>
+<td style="text-align: left;"><a href="Drivers/CMSIS/Device/ST/STM32L4xx/Release_Notes.html">V1.5.1</a> <span class="icon-info"></span></td>
+<td style="text-align: left;"><a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32F4xx_HAL_Driver HAL</td>
+<td style="text-align: left;"><a href="Drivers/STM32F4xx_HAL_Driver/Release_Notes.html">V1.7.6</a> <span class="icon-info"></span></td>
+<td style="text-align: left;"><a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32F7xx_HAL_Driver HAL</td>
+<td style="text-align: left;"><a href="Drivers/STM32F7xx_HAL_Driver/Release_Notes.html">V1.2.7</a> <span class="icon-info"></span></td>
+<td style="text-align: left;"><a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32L4xx_HAL_Driver HAL</td>
+<td style="text-align: left;"><a href="Drivers/STM32L4xx_HAL_Driver/Release_Notes.html">V1.10.0</a> <span class="icon-info"></span></td>
+<td style="text-align: left;"><a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a></td>
+</tr>
+</tbody>
+</table>
+<p>Drivers</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">BSP Component</th>
+<th style="text-align: left;">Version</th>
+<th style="text-align: left;">License</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">BSP B-L475E-IOT01</td>
+<td style="text-align: left;"><a href="Drivers/BSP/B-L475E-IOT01/Release_Notes.html">V1.1.4</a> <span class="icon-info"></span></td>
+<td style="text-align: left;"><a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">BSP STM32F413H-Discovery</td>
+<td style="text-align: left;"><a href="Drivers/BSP/STM32F413H-Discovery/Release_Notes.html">V1.0.1</a></td>
+<td style="text-align: left;"><a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">BSP STM32F769I-Discovery</td>
+<td style="text-align: left;"><a href="Drivers/BSP/STM32F769I-Discovery/Release_Notes.html">V2.0.1</a></td>
+<td style="text-align: left;"><a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">BSP STM32L496G-Discovery</td>
+<td style="text-align: left;"><a href="Drivers/BSP/STM32L496G-Discovery/Release_Notes.html">V1.1.2</a><span class="icon-cart"></span></td>
+<td style="text-align: left;"><a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">BSP adv7533</td>
+<td style="text-align: left;"><a href="Drivers/BSP/Components/adv7533/Release_Notes.html">V1.0.2</a></td>
+<td style="text-align: left;"><a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">BSP Common</td>
+<td style="text-align: left;"><a href="Drivers/BSP/Components/Common/Release_Notes.html">V5.1.2</a></td>
+<td style="text-align: left;"><a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">BSP mfxstm32l152</td>
+<td style="text-align: left;"><a href="Drivers/BSP/Components/mfxstm32l152/Release_Notes.html">V2.0.1</a></td>
+<td style="text-align: left;"><a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">BSP otm8009a</td>
+<td style="text-align: left;"><a href="Drivers/BSP/Components/otm8009a/Release_Notes.html">V1.0.3</a></td>
+<td style="text-align: left;"><a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">BSP st7789h2</td>
+<td style="text-align: left;"><a href="Drivers/BSP/Components/st7789h2/Release_Notes.html">V1.1.2</a></td>
+<td style="text-align: left;"><a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">BSPv2 B-L475E-IOT01</td>
+<td style="text-align: left;"><a href="Drivers/BSPv2/B-L475E-IOT01/Release_Notes.html">V2.0.0</a> <span class="icon-cart"></span></td>
+<td style="text-align: left;"><a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">BSPv2 STM32F413H-Discovery</td>
+<td style="text-align: left;"><a href="Drivers/BSPv2/STM32F413H-Discovery/Release_Notes.html">V2.0.0</a> <span class="icon-cart"></span></td>
+<td style="text-align: left;"><a href="https://www.st.com/resource/en/license_agreement/dm00216740.pdf">SLA0044</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">BSPv2 Common</td>
+<td style="text-align: left;"><a href="Drivers/BSPv2/Components/Common/Release_Notes.html">V6.0.0</a> <span class="icon-cart"></span></td>
+<td style="text-align: left;"><a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">BSPv2 es_wifi</td>
+<td style="text-align: left;"><a href="Drivers/BSPv2/Components/es_wifi/Release_Notes.html">V1.4.0</a> <span class="icon-info"></span></td>
+<td style="text-align: left;"><a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">BSPv2 hts221</td>
+<td style="text-align: left;"><a href="Drivers/BSPv2/Components/hts221/Release_Notes.html">V5.1.0</a> <span class="icon-cart"></span></td>
+<td style="text-align: left;"><a href="https://www.st.com/resource/en/license_agreement/dm00216740.pdf">SLA0044</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">BSPv2 lis3mdl</td>
+<td style="text-align: left;"><a href="Drivers/BSPv2/Components/lis3mdl/Release_Notes.html">V5.1.1</a> <span class="icon-cart"></span></td>
+<td style="text-align: left;"><a href="https://www.st.com/resource/en/license_agreement/dm00216740.pdf">SLA0044</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">BSPv2 lps22hb</td>
+<td style="text-align: left;"><a href="Drivers/BSPv2/Components/lps22hb/Release_Notes.html">V5.1.0</a> <span class="icon-cart"></span></td>
+<td style="text-align: left;"><a href="https://www.st.com/resource/en/license_agreement/dm00216740.pdf">SLA0044</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">BSPv2 lsm6dsl</td>
+<td style="text-align: left;"><a href="Drivers/BSPv2/Components/lsm6dsl/Release_Notes.html">V5.1.0</a> <span class="icon-cart"></span></td>
+<td style="text-align: left;"><a href="https://www.st.com/resource/en/license_agreement/dm00216740.pdf">SLA0044</a></td>
+</tr>
+</tbody>
+</table>
+<p>Middleware</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Component</th>
+<th style="text-align: left;">Version</th>
+<th style="text-align: left;">ST modified</th>
+<th style="text-align: left;">License</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Microsoft Azure SDK for C</td>
+<td style="text-align: left;"><a href="Middlewares/Third_Party/azure-iot-sdk-c/readme.md">1.3.1</a> <span class="icon-info"></span></td>
+<td style="text-align: left;"><a href="Middlewares/Third_Party/azure-iot-sdk-c/st_readme.txt">2019-06-24</a></td>
+<td style="text-align: left;"><a href="https://opensource.org/licenses/MIT">MIT</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">FreeRTOS</td>
+<td style="text-align: left;"><a href="Middlewares/Third_Party/FreeRTOS/Source/readme.txt">V10.0.1 2018-08-13</a> <span class="icon-info"></span></td>
+<td style="text-align: left;"><a href="Middlewares/Third_Party/FreeRTOS/Source/st_readme.txt">2018-08-13</a></td>
+<td style="text-align: left;"><a href="Middlewares/Third_Party/FreeRTOS/License/license.txt">MIT</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">LwIP</td>
+<td style="text-align: left;"><a href="Middlewares/Third_Party/LwIP/CHANGELOG">V2.1.2_20190315</a> <span class="icon-info"></span></td>
+<td style="text-align: left;"><a href="Middlewares/Third_Party/LwIP/st_readme.txt">2019-03-15</a></td>
+<td style="text-align: left;"><a href="Middlewares/Third_Party/LwIP/COPYING">BSD</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">mbedTLS</td>
+<td style="text-align: left;"><a href="Middlewares/Third_Party/mbedTLS/ChangeLog">V2.14.1_20190329</a> <span class="icon-info"></span></td>
+<td style="text-align: left;"><a href="Middlewares/Third_Party/mbedTLS/st_readme.txt">2018-12-21</a></td>
+<td style="text-align: left;"><a href="https://opensource.org/licenses/Apache-2.0">Apache-2.0</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32_Cellular</td>
+<td style="text-align: left;">[V3.6.1] <span class="icon-cart"></span></td>
+<td style="text-align: left;">[2019-04-12]</td>
+<td style="text-align: left;"><a href="https://www.st.com/resource/en/license_agreement/dm00216740.pdf">SLA0044</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32_Connect_Library</td>
+<td style="text-align: left;"><a href="Middlewares/ST/STM32_Connect_Library/Release_Notes.html">V1.0.3</a> <span class="icon-cart"></span></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><a href="https://www.st.com/resource/en/license_agreement/dm00216740.pdf">SLA0044</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32_Secure_Engine</td>
+<td style="text-align: left;"><a href="Middlewares/ST/STM32_Secure_Engine/Release_Notes.html">V1.2.0</a> <span class="icon-cart"></span></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><a href="https://www.st.com/resource/en/license_agreement/dm00216740.pdf">SLA0044</a></td>
+</tr>
+</tbody>
+</table>
+<p>Applications</p>
+<ul>
+<li>Microsoft Azure IoT Cube sample application.</li>
+</ul>
+<h2 id="known-limitations-1">Known Limitations</h2>
+<ul>
+<li>Azure SDK: Disabled some compilation warnings in the project files.
+<ul>
+<li>IAR</li>
+</ul>
+<pre><code>- Do not require C functions prototypes
+- Pa084:  pointless integer comparison, the result is always %s
+- Pe177:  %n was declared but never referenced
+- Pe181: argument is incompatible with corresponding format string conversion</code></pre>
+<ul>
+<li>Keil</li>
+</ul>
+<pre><code>--gnu
+--diag_suppress=
+  177    &lt;entity&gt; was declared but never referenced
+  1295   Deprecated declaration &lt;entity&gt; - give arg types
+
+  Note: STRINGS_C_SPRINTF_BUFFER_SIZE is defined in the project files so that the Azure printf wrapper does not silently run out of memory.</code></pre></li>
+<li>Application using the Azure SDK serializer: Disabled some compilation warnings in the source.
+<ul>
+<li>IAR</li>
+</ul>
+<pre><code>#pragma diag_suppress=Pe177</code></pre>
+<ul>
+<li>Keil</li>
+</ul>
+<pre><code>#pragma diag_suppress 177</code></pre>
+<ul>
+<li>SystemWorkbench</li>
+</ul>
+<pre><code>#pragma GCC diagnostic ignored &quot;-Wunused-variable&quot;
+#pragma GCC diagnostic ignored &quot;-Wunused-function&quot;</code></pre></li>
+<li><p>The SBSFU secure boot feature is not enabled in SW4STM32 projects for B-L475E-IOT01A and 32L496GDISCOVERY because the code does not fit in Flash memory. This results in a different memory map.</p></li>
+<li><p>The SBSFU secure boot feature is not enabled in Keil MDK-ARM project for 32L496GDISCOVERY because the code does not fit in Flash memory.</p></li>
+<li><p>If the Firmware Update process is interrupted, the board must be re-flashed.</p></li>
+<li>Occasional temporary connection failures on 32F769IDISCOVERY:
+<ul>
+<li>The device may not (re)connect to the IoT hub right away. If a trial fails, a few error log lines are displayed on the console. The device reconnects after expiration of the MQTT keepalive timeout.</li>
+</ul></li>
+<li>System Workbench for STM32.
+<ul>
+<li>B-L475E-IOT01A board rev B and rev C requires to use System Workbench for STM32 with version greater or equal to 2.1. A debug option must be changed:
+<ul>
+<li>Right click on the project, select “Debus as…”, “Debug Configuration…”, the “B-L475E-IOT01A.elf” target, then the “Debugger” tab</li>
+<li>If the “Reset Mode” option is not visible, click on the “Show generator options…” button</li>
+<li>The “Reset Mode” option must be set to “Software system reset”</li>
+</ul></li>
+<li>The debugger starts the execution from the application main(), and not from the BootLoader main(). A workaround is to perform a hard-reset on the board to force a full reboot.</li>
+</ul></li>
+<li>Warnings when building SBSFU
+<ul>
+<li>By default we deactivate SBSFU security to enable debug which trigs warnings.</li>
+</ul></li>
+</ul>
+<h2 id="development-toolchains-and-compilers-1">Development Toolchains and Compilers</h2>
+<ul>
+<li>IAR Embedded Workbench for ARM (EWARM). Version 8.32.3</li>
+<li>Keil Microcontroller Development Kit (MDK-ARM). Version 5.27</li>
+<li>System Workbench for STM32 (SW4STM32). Version 2.9</li>
+</ul>
+<h2 id="supported-devices-and-boards-1">Supported Devices and Boards</h2>
+<ul>
+<li>B-L475E-IOT01A board (MB1297 rev D).</li>
+<li>B-L475E-IOT01A board (MB1297 rev B and C) with limitations for System Workbench for STM32 tools.</li>
+<li>32F413HDISCOVERY board (MB1274 rev B).</li>
+<li>32F769IDISCOVERY board (MB1225 rev B).</li>
+<li>P-L496G-CELL02 board package including the 32L496G-Discovery board (MB1261 rev B) and the Cellular Add-on board based on BG96 4G Modem (MB1329 rev B)</li>
+</ul>
+<h2 id="dependencies-1">Dependencies</h2>
+<p>This release is pre-integrated with minor adaptations, and compatible with the following STM32Cube expansion packages:</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Package</th>
+<th style="text-align: left;">Version</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://www.st.com/en/embedded-software/x-cube-cellular.html">X-CUBE-CELLULAR</a></td>
+<td style="text-align: left;">V3.6</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://www.st.com/en/embedded-software/x-cube-sbsfu.html">X-CUBE-SBSFU</a></td>
+<td style="text-align: left;">V1.2</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="collapse">
+<input type="checkbox" id="collapse-section3" aria-hidden="true"> <label for="collapse-section3" aria-hidden="true">V1.1.0 / 16 February 2018</label>
+<div>
+<h2 id="main-changes-2">Main Changes</h2>
+<p>Maintenance release</p>
+<p>Updated dependencies (see content list below)</p>
+<ul>
+<li>Updated to azure-iot-sdk-c client version: 1.1.31
+<ul>
+<li>Simplified the network adaptation:
+<ul>
+<li>Replaced the tlsio custom wrapper by the mbed tlsio and socketio wrappers provided by Azure SDK.</li>
+<li>Implemented the lean tcpsocketconnection_c interface.</li>
+</ul></li>
+</ul></li>
+<li>Updated to last Cube versions of HAL, BSP, LwIP and mbedTLS.</li>
+</ul>
+<h3 id="bug-fixes-2">Bug fixes</h3>
+<ul>
+<li>ES_WIFI driver (B-L475E-IOT01A, 32F413HDISCOVERY): Driver improvements.
+<ul>
+<li>Fix potential memory overflow happening on disconnection.</li>
+<li>Improve error management on disconnection.</li>
+<li>Improve SPI signals timing to speed up device communication.</li>
+<li>Simplify Send and Received SPI functions.</li>
+<li>Move to interrupt driver management.</li>
+<li>Support Bare Metal and RTOS environment.</li>
+</ul></li>
+</ul>
+<h2 id="contents-2">Contents</h2>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Component</th>
+<th style="text-align: left;">Version</th>
+<th style="text-align: left;">License</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">STM32L4xx HAL</td>
+<td style="text-align: left;">V1.8.2</td>
+<td style="text-align: left;"><a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32F4xx HAL</td>
+<td style="text-align: left;">V1.7.3</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32F7xx HAL</td>
+<td style="text-align: left;">V1.2.4</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">CMSIS</td>
+<td style="text-align: left;">V4.5.0</td>
+<td style="text-align: left;"><a href="Drivers/CMSIS/Documentation/General/html/CMSIS_END_USER_LICENCE_AGREEMENT.pdf">BSD</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">CMSIS STM32l4xx</td>
+<td style="text-align: left;">V1.4.2</td>
+<td style="text-align: left;"><a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">CMSIS STM32f4xx</td>
+<td style="text-align: left;">V2.6.2</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">CMSIS STM32f7xx</td>
+<td style="text-align: left;">V1.2.2</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">BSP B-L475E-IOT01A</td>
+<td style="text-align: left;">V1.1.1</td>
+<td style="text-align: left;"><a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">BSP STM32F413H-Discovery</td>
+<td style="text-align: left;">V1.0.1</td>
+<td style="text-align: left;">-</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">BSP STM32F769I-Discovery</td>
+<td style="text-align: left;">V2.0.1</td>
+<td style="text-align: left;">-</td>
+</tr>
+</tbody>
+</table>
+<p>Drivers</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">BSP Component</th>
+<th style="text-align: left;">Version</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">ADV7533</td>
+<td style="text-align: left;">V1.0.2</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Common</td>
+<td style="text-align: left;">V5.0.0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">HTS221</td>
+<td style="text-align: left;">V1.0.0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">LIS3MDL</td>
+<td style="text-align: left;">V1.0.0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">LPS22HB</td>
+<td style="text-align: left;">V1.0.0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">LSM6DSL</td>
+<td style="text-align: left;">V1.0.0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">MFXSTM32L152</td>
+<td style="text-align: left;">V2.0.1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">OTM8009A</td>
+<td style="text-align: left;">V1.0.3</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">SPIRIT1</td>
+<td style="text-align: left;">V3.2.3</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ST7789h2</td>
+<td style="text-align: left;">V1.1.2</td>
+</tr>
+</tbody>
+</table>
+<p>Middleware</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Component</th>
+<th style="text-align: left;">Version</th>
+<th style="text-align: left;">ST modified</th>
+<th style="text-align: left;">License</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Microsoft Azure SDK for C</td>
+<td style="text-align: left;">2018-01-29</td>
+<td style="text-align: left;">2018-01-30</td>
+<td style="text-align: left;"><a href="https://opensource.org/licenses/MIT">MIT</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">FreeRTOS</td>
+<td style="text-align: left;">V9.0.0</td>
+<td style="text-align: left;">2017-08-10</td>
+<td style="text-align: left;"><a href="Middlewares/Third_Party/FreeRTOS/License/license.txt">FreeRTOS</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">LwIP</td>
+<td style="text-align: left;">V2.0.3 2017-09-11</td>
+<td style="text-align: left;">2017-11-10</td>
+<td style="text-align: left;"><a href="Middlewares/Third_Party/LwIP/COPYING">LwIP</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">mbedTLS</td>
+<td style="text-align: left;">V2.6.1 2017-10-08</td>
+<td style="text-align: left;">2017-11-10</td>
+<td style="text-align: left;"><a href="https://opensource.org/licenses/Apache-2.0">Apache-2.0</a></td>
+</tr>
+</tbody>
+</table>
+<p>Applications</p>
+<ul>
+<li>Microsoft Azure IoT Cube sample application.</li>
+</ul>
+<h2 id="known-limitations-2">Known Limitations</h2>
+<ul>
+<li>Azure SDK: Disabled some compilation warnings in the project files.
+<ul>
+<li>IAR</li>
+</ul>
+<pre><code>- Do not require C functions prototypes
+- Pa084:  pointless integer comparison, the result is always %s
+- Pe188:  enumerated type mixed with another type
+- Pe177:  %n was declared but never referenced</code></pre>
+<ul>
+<li>Keil</li>
+</ul>
+<pre><code>--gnu
+--diag_suppress=
+  177   &lt;entity&gt; was declared but never referenced
+  188   enumerated type mixed with another type
+
+  Note: STRINGS_C_SPRINTF_BUFFER_SIZE is defined in the project files so that the Azure printf wrapper does not silently run out of memory.</code></pre>
+<ul>
+<li>SystemWorkbench</li>
+</ul>
+<pre><code>-Wno-unused-variable -Wno-unused-function -Wno-maybe-uninitialized -Wno-incompatible-pointer-types -Wno-format</code></pre></li>
+<li>Application using the Azure SDK serializer: Disabled some compilation warnings in the source.
+<ul>
+<li>IAR</li>
+</ul>
+<pre><code>#pragma diag_suppress=Pe177</code></pre>
+<ul>
+<li>Keil</li>
+</ul>
+<pre><code>#pragma diag_suppress 177</code></pre>
+<ul>
+<li>SystemWorkbench</li>
+</ul>
+<pre><code>#pragma GCC diagnostic ignored &quot;-Wunused-variable&quot;
+#pragma GCC diagnostic ignored &quot;-Wunused-function&quot;</code></pre></li>
+<li>Network connection instability on B-L475E-IOT01A and 32F413HDISCOVERY:
+<ul>
+<li>The board may not connect to the WiFi access point at first trial.</li>
+<li>The resolution of the remote host name sometimes fails - it seems to depend on the cache status of the DNS server of the local network.</li>
+</ul>
+<p><span class="icon-alert"></span> In any of the cases above, a board reset is required.</p>
+<ul>
+<li>Remote server disconnection reported as a system error by the WiFi module.</li>
+</ul></li>
+<li>Occasional temporary connection failures on 32F769IDISCOVERY:
+<ul>
+<li>The device may not (re)connect to the IoT hub right away. If a trial fails, a few error log lines are displayed on the console.</li>
+</ul></li>
+<li>System Workbench for STM32.
+<ul>
+<li>B-L475E-IOT01A board rev B and rev C requires to use System Workbench for STM32 with version greater or equal to 2.1. A debug option must be changed:
+<ul>
+<li>Right click on the project, select “Debus as…”, “Debug Configuration…”, the “B-L475E-IOT01A.elf” target, then the “Debugger” tab</li>
+<li>If the “Reset Mode” option is not visible, click on the “Show generator options…” button</li>
+<li>The “Reset Mode” option must be set to “Software system reset”</li>
+</ul></li>
+</ul></li>
+</ul>
+<h2 id="development-toolchains-and-compilers-2">Development Toolchains and Compilers</h2>
+<ul>
+<li>IAR Embedded Workbench for ARM (EWARM). Version 7.80.4</li>
+<li>Keil Microcontroller Development Kit (MDK-ARM) Version 5.24</li>
+<li>System Workbench for STM32. Version 2.4.0</li>
+</ul>
+<h2 id="supported-devices-and-boards-2">Supported Devices and Boards</h2>
+<ul>
+<li>B-L475E-IOT01A board (MB1297 rev D).</li>
+<li>B-L475E-IOT01A board (MB1297 rev B and C) with limitations for System Workbench for STM32 tools.</li>
+<li>32F413HDISCOVERY board (MB1274 rev B).</li>
+<li>32F769IDISCOVERY board (MB1225 rev B).</li>
+</ul>
+</div>
+</div>
+<div class="collapse">
+<input type="checkbox" id="collapse-section2" aria-hidden="true"> <label for="collapse-section2" aria-hidden="true">V1.0.1 / 5 October 2017</label>
+<div>
+<h2 id="main-changes-3">Main Changes</h2>
+<p>Maintenance release</p>
+<p>Updated dependencies (see Content list below) - Updated to last versions of HAL, BSP, azure-iot-sdk-c, LwIP and mbedTLS</p>
+<h3 id="bug-fixes-3">Bug fixes</h3>
+<ul>
+<li>Azure application: Fix the reconnection to the IoT hub after the expiration of the SAS token (after 48min by default).
+<ul>
+<li>Note: The Inventek ES_WIFI WiFi module on B-L475E-IOT01A and 32F413H-DISCO does not accept further TCP send messages once the remote host has closed the connection (FIN TCP tag). This causes a few lines of error log on the console when the SAS token expires (i.e. after ‘Connection expired. Reconnecting’ is displayed. But the Azure SDK is robust to this error and it reconnects correctly.</li>
+</ul></li>
+<li><p>Azure application: Fix the crt initialization.</p></li>
+<li><p>ES_WIFI driver (B-L475E-IOT01A, 32F413H-DISCO): Solved random network disconnections that were due to a de-synchronization between the SPI and the GPIO.</p></li>
+<li>Ethernet &amp; TCP/IP configuration (32F769I-DISCO)
+<ul>
+<li>Generate a unique MAC address derived from the CPU ID in order to avoid address collisions when several F7 boards are connected to the same LAN.</li>
+<li>Activate the local port number true randomization, to avoid possible TLS session confusions on server side after a board reset.</li>
+<li>Activate the TCP keep-alive. Otherwise, the remote host may disconnect earlier than the first MQTT keep-alive message.</li>
+</ul></li>
+<li><p>Improved error management</p></li>
+</ul>
+<h3 id="contents-3">Contents</h3>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Component</th>
+<th style="text-align: left;">Version</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">STM32L4xx HAL</td>
+<td style="text-align: left;">V1.8.0</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32F4xx HAL</td>
+<td style="text-align: left;">V1.7.0</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32F7xx HAL</td>
+<td style="text-align: left;">V1.2.3</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">CMSIS</td>
+<td style="text-align: left;">V4.5.0</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">CMSIS STM32l4xx</td>
+<td style="text-align: left;">V1.4.0</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">CMSIS STM32f4xx</td>
+<td style="text-align: left;">V2.6.1</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">CMSIS STM32f7xx</td>
+<td style="text-align: left;">V1.2.1</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">BSP B-L475E-IOT01A</td>
+<td style="text-align: left;">V1.1.0</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">BSP STM32F413H-Discovery</td>
+<td style="text-align: left;">V1.0.0</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">BSP STM32F769I-Discovery</td>
+<td style="text-align: left;">V2.0.1</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Drivers</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">BSP Component</th>
+<th style="text-align: left;">Version</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">ADV7533</td>
+<td style="text-align: left;">V1.0.2</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Common</td>
+<td style="text-align: left;">V5.0.0</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">HTS221</td>
+<td style="text-align: left;">V1.0.0</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">LIS3MDL</td>
+<td style="text-align: left;">V1.0.0</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">LPS22HB</td>
+<td style="text-align: left;">V1.0.0</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">LSM6DSL</td>
+<td style="text-align: left;">V1.0.0</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">MFXSTM32L152</td>
+<td style="text-align: left;">V2.0.1</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">OTM8009A</td>
+<td style="text-align: left;">V1.0.3</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">SPIRIT1</td>
+<td style="text-align: left;">V3.2.3</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ST7789h2</td>
+<td style="text-align: left;">V1.1.2</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Middleware</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Component</th>
+<th style="text-align: left;">Version</th>
+<th style="text-align: left;">ST modified</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Microsoft Azure SDK for C</td>
+<td style="text-align: left;">2017-06-02</td>
+<td style="text-align: left;">2018-07-07</td>
+<td></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">FreeRTOS</td>
+<td style="text-align: left;">V9.0.0</td>
+<td style="text-align: left;">2017-08-10</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">LwIP</td>
+<td style="text-align: left;">V2.0.0</td>
+<td style="text-align: left;">2016-12-23, packaged 2017-09-01</td>
+<td></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">mbedTLS</td>
+<td style="text-align: left;">V2.11.0 2018-06-18</td>
+<td style="text-align: left;">2018-07-06</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Applications</p>
+<ul>
+<li>Azure IoT cloud application.</li>
+</ul>
+<h2 id="known-limitations-3">Known Limitations</h2>
+<ul>
+<li>Azure SDK: Disabled some compilation warnings in the project files.
+<ul>
+<li>IAR
+<ul>
+<li>Do not require C functions prototypes</li>
+<li>Pa084: pointless integer comparison, the result is always %s</li>
+<li>Pa089: enumerated type mixed with another enumerated type</li>
+<li>Pe186: pointless comparison of unsigned integer with zero</li>
+<li>Pe188: enumerated type mixed with another type</li>
+<li>Pe177: %n was declared but never referenced</li>
+</ul></li>
+<li>Keil
+<ul>
+<li>–gnu</li>
+<li>–diag_suppress=186,177,188,191</li>
+</ul></li>
+<li>SystemWorkbench
+<ul>
+<li>-Wno-unused-variable -Wno-unused-function -Wno-maybe-uninitialized -Wno-incompatible-pointer-types -Wno-enum-compare</li>
+</ul></li>
+</ul></li>
+<li>Application using the Azure SDK serializer: Disabled some compilation warnings in the source.
+<ul>
+<li>IAR
+<ul>
+<li>#pragma diag_suppress=Pe177</li>
+</ul></li>
+<li>Keil
+<ul>
+<li>#pragma diag_suppress 177</li>
+</ul></li>
+<li>SystemWorkbench
+<ul>
+<li>#pragma GCC diagnostic ignored “-Wunused-variable”</li>
+<li>#pragma GCC diagnostic ignored “-Wunused-function”</li>
+</ul></li>
+</ul></li>
+<li>mbedTLS compilation warnings
+<ul>
+<li>2 false positive “variable is used before being set”.</li>
+</ul></li>
+<li>Network connection instability on B-L475E-IOT01A and 32F413H-DISCO:
+<ul>
+<li>The board may not connect to the WiFi access point at first trial.</li>
+<li>The resolution of the remote host name sometimes fails - it seems to depend on the cache status of the DNS server of the local network.</li>
+<li><p>-&gt; In any of the cases above, a board reset is required.</p></li>
+<li><p>Remote server deconnection reported as a system error by the WiFi module.</p></li>
+</ul></li>
+<li>Occasional temporary connection failures on 32F769I-DISCO:
+<ul>
+<li>The device may not (re)connect to the IoT right away. If a trial fails, a few error log lines are displayed on the console.</li>
+</ul></li>
+</ul>
+<h2 id="development-toolchains-and-compilers-3">Development Toolchains and Compilers</h2>
+<ul>
+<li>IAR Embedded Workbench for ARM (EWARM). Version 7.80.4</li>
+<li>Keil Microcontroller Development Kit (MDK-ARM) Version 5.24</li>
+<li>System Workbench for STM32. Version 2.1.0</li>
+</ul>
+<h2 id="supported-devices-and-boards-3">Supported Devices and Boards</h2>
+<ul>
+<li>B-L475E-IOT01A board (MB1297 rev D)</li>
+<li>32F413H-DISCO board (MB1274 rev B)</li>
+<li>32F769I-DISCO board (MB1225 rev B)</li>
+</ul>
+</div>
+</div>
+<div class="collapse">
+<input type="checkbox" id="collapse-section1" aria-hidden="true"> <label for="collapse-section1" aria-hidden="true">V1.0.0 / 12 July 2017</label>
+<div>
+<h2 id="main-changes-4">Main Changes</h2>
+<p>First release</p>
+<p>Note: 32F413H-DISCO and 32F769I-DISCO are not equipped with the B-L475E-IOT01A set of sensors. The telemetry messages they send therefore contain a timestamp, but no measurements.</p>
+<h3 id="contents-4">Contents</h3>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Component</th>
+<th style="text-align: left;">Version</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">STM32L4xx HAL</td>
+<td style="text-align: left;">V1.7.0</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32F4xx HAL</td>
+<td style="text-align: left;">V1.7.0</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32F7xx HAL</td>
+<td style="text-align: left;">V1.2.1</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">BSP B-L475E-IOT01A</td>
+<td style="text-align: left;">V1.1.0</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Drivers</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">BSP Component</th>
+<th style="text-align: left;">Version</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Common</td>
+<td style="text-align: left;">V5.0.0</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">HTS221</td>
+<td style="text-align: left;">V1.0.0</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">LIS3MDL</td>
+<td style="text-align: left;">V1.0.0</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">LPS22HB</td>
+<td style="text-align: left;">V1.0.0</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">LSM6DSL</td>
+<td style="text-align: left;">V1.0.0</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Middleware</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Component</th>
+<th style="text-align: left;">Version</th>
+<th style="text-align: left;">ST modified</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Microsoft Azure SDK for C</td>
+<td style="text-align: left;">2017-06-02</td>
+<td style="text-align: left;">2018-07-07</td>
+<td></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">FreeRTOS</td>
+<td style="text-align: left;">V9.0.0</td>
+<td style="text-align: left;">2017-03-03</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">LwIP</td>
+<td style="text-align: left;">V2.0.0</td>
+<td style="text-align: left;">2016-12-23, packaged 2017-07-12</td>
+<td></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">mbedTLS</td>
+<td style="text-align: left;">V2.4.0</td>
+<td style="text-align: left;">2016-12-23</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Applications</p>
+<ul>
+<li>Azure IoT hub application.</li>
+</ul>
+<h2 id="known-limitations-4">Known Limitations</h2>
+<ul>
+<li>Azure SDK: Disabled some compilation warnings in the project files.
+<ul>
+<li>IAR
+<ul>
+<li>Do not require C functions prototypes</li>
+<li>Pa084: pointless integer comparison, the result is always %s</li>
+<li>Pa089: enumerated type mixed with another enumerated type</li>
+<li>Pe186: pointless comparison of unsigned integer with zero</li>
+<li>Pe188: enumerated type mixed with another type</li>
+<li>Pe177: %n was declared but never referenced</li>
+</ul></li>
+<li>Keil
+<ul>
+<li>–gnu</li>
+<li>–diag_suppress=186,177,188,191</li>
+</ul></li>
+<li>SystemWorkbench
+<ul>
+<li>-Wno-unused-variable -Wno-unused-function -Wno-maybe-uninitialized -Wno-incompatible-pointer-types -Wno-enum-compare</li>
+</ul></li>
+</ul></li>
+<li>Application using the Azure SDK serializer: Disabled some compilation warnings in the source.
+<ul>
+<li>IAR
+<ul>
+<li>#pragma diag_suppress=Pe177</li>
+</ul></li>
+<li>Keil
+<ul>
+<li>#pragma diag_suppress 177</li>
+</ul></li>
+<li>SystemWorkbench
+<ul>
+<li>#pragma GCC diagnostic ignored “-Wunused-variable”</li>
+<li>#pragma GCC diagnostic ignored “-Wunused-function”</li>
+</ul></li>
+</ul></li>
+<li>mbedTLS compilation warnings
+<ul>
+<li>2 false positive “variable is used before being set”.</li>
+</ul></li>
+<li>Network connection instability on B-L475E-IOT01A and STM32F413H-DISCO:
+<ul>
+<li>The board may not connect to the WiFi access point at first trial.</li>
+<li>The resolution of the remote host name sometimes fails - it seems to depend on the cache status of the DNS server of the local network.</li>
+<li>Sporadic AT protocol errors on the serial link between the STM32 host and the WiFi module (control/data unsync).</li>
+<li><p>-&gt; In any of the cases above, a board reset is required.</p></li>
+<li><p>Remote server deconnection reported as a system error by the WiFi module.</p></li>
+</ul></li>
+</ul>
+<h2 id="development-toolchains-and-compilers-4">Development Toolchains and Compilers</h2>
+<p>The package has been tested with: - IAR Embedded Workbench for ARM (EWARM). Version 7.80.4 - Keil Microcontroller Development Kit (MDK-ARM) Version 5.22 - System Workbench for STM32. Version 2.0.1</p>
+<h2 id="supported-devices-and-boards-4">Supported Devices and Boards</h2>
+<ul>
+<li>B-L475E-IOT01A board (MB1297 rev D)</li>
+<li>32F413H-DISCO board (MB1274 rev B)</li>
+<li>32F769I-DISCO board (MB1225 rev B)</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<footer class="sticky">
+For complete documentation on <mark>STM32</mark> microcontrollers please visit <a href="http://www.st.com/stm32" class="uri">http://www.st.com/stm32</a>
+</footer>
+</body>
+</html>
