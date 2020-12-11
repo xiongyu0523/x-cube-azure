@@ -40,7 +40,7 @@ typedef bool _Bool;
 #else //  _MSC_VER
 
 #if defined __STDC_VERSION__
-#if ((__STDC_VERSION__  == 199901L) || (__STDC_VERSION__ == 201000L) || (__STDC_VERSION__ == 201112L))
+#if ((__STDC_VERSION__  == 199901L) || (__STDC_VERSION__ == 201000L) || (__STDC_VERSION__ == 201112L) || (__STDC_VERSION__ == 201710L))
 /*C99 compiler or C11*/
 #define HAS_STDBOOL
 #include <stdbool.h>
@@ -106,7 +106,7 @@ MOCKABLE_FUNCTION(, int, size_tToString, char*, destination, size_t, destination
 #define ISNAN _isnan
 #else // _MSC_VER
 #if defined __STDC_VERSION__
-#if ((__STDC_VERSION__  == 199901L) || (__STDC_VERSION__ == 201000L) || (__STDC_VERSION__ == 201112L))
+#if ((__STDC_VERSION__  == 199901L) || (__STDC_VERSION__ == 201000L) || (__STDC_VERSION__ == 201112L) || (__STDC_VERSION__ == 201710L))
 /*C99 compiler or C11*/
 #define ISNAN isnan
 #else //  ((__STDC_VERSION__  == 199901L) || (__STDC_VERSION__ == 201000L) || (__STDC_VERSION__ == 201112L))

@@ -14,7 +14,7 @@ set "version=%4"
 set "SBSFUBootLoader=%~d0%~p0\\..\\.."
 ::The default installation path of the Cube Programmer tool is: "C:\Program Files\STMicroelectronics\STM32Cube\STM32CubeProgrammer\bin"
 ::If you installed it in another location, please update the %programmertool% variable below accordingly.
-set "programmertool="C:\\Program Files\\STMicroelectronics\\STM32Cube\\STM32CubeProgrammer\\bin\\STM32_Programmer_CLI""
+set "programmertool="C:\\Program Files (x86)\\STMicroelectronics\\STM32Cube\\STM32CubeProgrammer\\bin\\STM32_Programmer_CLI""
 set "userAppBinary=%projectdir%\\PostBuild\\"
 
 set "sfu=%userAppBinary%\\%execname%.sfu"

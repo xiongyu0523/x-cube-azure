@@ -59,7 +59,7 @@ MU_DEFINE_ENUM(EDM_BOOLEANS, EDM_BOOLEANS_VALUES);
 #define ISPOSITIVEINFINITY(x) ((_finite((x))==0) && ((_fpclass((x)) & _FPCLASS_PINF) == _FPCLASS_PINF))
 #else
 #if defined __STDC_VERSION__
-#if ((__STDC_VERSION__  == 199901L) || (__STDC_VERSION__ == 201112L))
+#if ((__STDC_VERSION__  == 199901L) || (__STDC_VERSION__ == 201112L) || (__STDC_VERSION__ == 201710L))
 /*C99 compiler or C11*/
 #define ISPOSITIVEINFINITY(x) (isinf((x)) && (signbit((x))==0))
 #else
@@ -79,7 +79,7 @@ MU_DEFINE_ENUM(EDM_BOOLEANS, EDM_BOOLEANS_VALUES);
 #define ISNEGATIVEINFINITY(x) ((_finite((x))==0) && ((_fpclass((x)) & _FPCLASS_NINF) == _FPCLASS_NINF))
 #else
 #if defined __STDC_VERSION__
-#if ((__STDC_VERSION__  == 199901L) || (__STDC_VERSION__ == 201112L))
+#if ((__STDC_VERSION__  == 199901L) || (__STDC_VERSION__ == 201112L) || (__STDC_VERSION__ == 201710L))
 /*C99 compiler or C11*/
 #define ISNEGATIVEINFINITY(x) (isinf((x)) && (signbit((x))!=0))
 #else
